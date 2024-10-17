@@ -1,10 +1,11 @@
 ---
-  import Layout from "../layout/layout.astro"
+  import Layout from "../layout/MainLayout.astro"
 	const title = "About Page"
 ---
 
 <Layout title={title}>
   <div class="title flex flex-col">
-    <a class="bg-blue-600 font-bold text-white py-1 px-2 rounded-md w-max" href="/">Kembali ke Homepage!</a>
+    <h1 class="text-3xl font-gmarket font-bold">{title}</h1> 
+    <a class="bg-blue-600 font-medium font-esamanru text-white py-1 px-2 rounded-md w-max" href="/">Kembali ke Homepage!</a>
   </div>
 </Layout>

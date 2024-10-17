@@ -1,11 +1,12 @@
 ---
-	import Layout from "../layout/layout.astro"
+	import Layout from "../layout/MainLayout.astro"
 	const title = "Home Page"
+	const metaDesc = "Eat Pizza, franchise pizza nomor satu dari Korea, kini hadir di Indonesia! Sajikan pizza persegi panjang inovatif dan menangkan hati pelanggan. Peluang bisnis kuliner menjanjikan menanti Anda."
 ---
 
-<Layout title={title}>
-	<div class="title flex flex-col">
-		<h1 class="font-esamanru font-bold">Babi Ngepet</h1>
-		<a class="bg-red-600 font-bold text-white p-2 rounded-md w-max" href="/about">Pergi ke About Page!</a>
+<Layout title={title} metaDesc={metaDesc}>
+	<div class="title flex flex-col bg-red-900">
+		<h1 class="text-3xl font-esamanru font-bold">{title} Babi Ngepet</h1>
+		<a class="bg-red-600 font-medium text-white p-2 rounded-md w-max font-esamanru" href="/about">Pergi ke About Page!</a>
 	</div>
 </Layout>

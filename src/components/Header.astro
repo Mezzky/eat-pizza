@@ -1,0 +1,53 @@
+---
+// Header.astro
+const styles = {
+  navLinks: 'font-esamanru font-medium text-dark hover:underline',
+  navLunks: 'font-esamanru font-medium text-dark hover:underline',
+};
+---
+<header class="bg-primary p-4">
+  <nav class="flex justify-between items-center">
+    <a href="#home" class="flex items-center">
+      <img src="/image/eatpizza-logo.png" alt="Logo" class="h-8 mr-2" />
+    </a>
+    
+    <!-- Hamburger icon -->
+    <div class="tablet:hidden">
+      <button id="menu-toggle" class="focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Navigation Links -->
+    <ul class="hidden tablet:flex space-x-4" id="menu">
+      <li><a href="/" class={styles.navLinks}>Home</a></li>
+      <li><a href="/about" class={styles.navLinks}>About Us</a></li>
+      <li><a href="/menu" class={styles.navLinks}>Menu</a></li>
+      <li><a href="/store" class={styles.navLinks}>Store</a></li>
+      <li><a href="/partner" class={styles.navLinks}>Partnership</a></li>
+      <li><a href="/contact" class={styles.navLinks}>Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <ul class="tablet:hidden hidden" id="mobile-menu">
+    <li class="p-2"><a href="/" class={styles.navLinks}>Home</a></li>
+    <li class="p-2"><a href="/about" class={styles.navLinks}>About Us</a></li>
+    <li class="p-2"><a href="/menu" class={styles.navLinks}>Menu</a></li>
+    <li class="p-2"><a href="/store" class={styles.navLinks}>Store</a></li>
+    <li class="p-2"><a href="/partner" class={styles.navLinks}>Partnership</a></li>
+    <li class="p-2"><a href="/contact" class={styles.navLinks}>Contact Us</a></li>
+  </ul>
+</header>
+
+<script>
+  // JavaScript to toggle mobile menu
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
