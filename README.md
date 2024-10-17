@@ -1,47 +1,25 @@
-# Astro Starter Kit: Minimal
+# Eat Pizza
 
-```sh
-npm create astro@latest -- --template minimal
-```
+![Project Banner](./src/Assets/banner/banner.png)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Description
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This project is a Landing Page for a Frenchise called Eat Pizza that's have a big inovation for new shape Pizza in Rectangle, built using **Astro.js** and **Tailwind CSS**. It features a modern design with responsive layouts and smooth scrolling animations. The website aims to give best experience for users, and Gen-Z targeting modern and fun design style.
 
-## 🚀 Project Structure
+## Table of Contents
 
-Inside of your Astro project, you'll see the following folders and files:
+- [Features](#features)
+- [Technologies](#technologies)
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Features
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- Responsive design using Tailwind CSS
+- Smooth scrolling animation
+- Contact form integrate with Google Sheet
+- Good SEO Optimization
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Technologies
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Astro.js** - A modern static site generator
+- **Tailwind CSS** - A utility-first CSS framework
+- And Any other technologies used, e.g., JavaScript libraries, plugins
