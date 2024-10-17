@@ -22,4 +22,4 @@ This project is a Landing Page for a Frenchise called Eat Pizza that's have a bi
 
 - **Astro.js** - A modern static site generator
 - **Tailwind CSS** - A utility-first CSS framework
-- And Any other technologies used, e.g., JavaScript libraries, plugins
+- And Any other technologies used, JavaScript libraries, plugins
