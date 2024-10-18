@@ -5,18 +5,18 @@
 
 @font-face {
   font-family: 'Esamanru';
-  src:  url('/src/Assets/fonts/esamanru Light.ttf') format('ttf'),
-          ('/src/Assets/fonts/esamanru Medium.ttf') format('ttf'),
-          ('/src/Assets/fonts/esamanru Bold.ttf') format('ttf');
+  src:  url('/fonts/esamanru Light.ttf') format('ttf'),
+          ('/fonts/esamanru Medium.ttf') format('ttf'),
+          ('/fonts/esamanru Bold.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Gmarket Sans';
-  src:  url('/src/Assets/fonts/GmarketSansTTFLight.ttf') format('ttf'),
-          ('/src/Assets/fonts/GmarketSansTTFMedium.ttf') format('ttf'),
-          ('/src/Assets/fonts/GmarketSansTTFBold.ttf') format('ttf');
+  src:  url('/fonts/GmarketSansTTFLight.ttf') format('ttf'),
+          ('/fonts/GmarketSansTTFMedium.ttf') format('ttf'),
+          ('/fonts/GmarketSansTTFBold.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
