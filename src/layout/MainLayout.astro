@@ -2,6 +2,7 @@
 const { title, metaDesc } = Astro.props;
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 ---
 
 <!DOCTYPE html>
@@ -12,7 +13,6 @@ import Footer from "../components/Footer.astro";
   <title>Eat Pizza | {title}</title>
   <meta name="description" content={metaDesc}>
   <link rel="icon" href="/eatpizza-favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="../styles/global.css" />
 </head>
 <body class="bg-main">
   <Header/>
