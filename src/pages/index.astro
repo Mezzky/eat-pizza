@@ -31,19 +31,30 @@ import { PlayIcon, PauseIcon } from '@heroicons/react/24/solid';
   </div>
 
   <!-- Video Section -->
-	<section class="video flex justify-center items-center relative">
-		<video id="eatpizzaVideo" class="w-full cursor-pointer" src="/video/eatpizza-video.mp4" loop></video>
-		
-		<!-- Toggle Button -->
-		<button 
-			id="toggleButton" 
-			class="absolute flex justify-center items-center h-10 w-10 text-white opacity-100 transition-opacity duration-300 ease-in-out"
-		>
-			<PlayIcon id="playIcon" class="h-8 w-8 text-white" />
-			<PauseIcon id="pauseIcon" class="h-8 w-8 text-white hidden" /> <!-- Initially hidden -->
-		</button>
-	</section>
-  
+  <section class="video flex justify-center items-center relative">
+    <video id="eatpizzaVideo" class="w-full cursor-pointer" src="/video/eatpizza-video.mp4" loop></video>
+    <button 
+      id="toggleButton" 
+      class="absolute flex justify-center items-center h-10 w-10 text-white opacity-100 transition-opacity duration-300 ease-in-out"
+    >
+      <PlayIcon id="playIcon" class="h-8 w-8 text-white" />
+      <PauseIcon id="pauseIcon" class="h-8 w-8 text-white hidden" />
+    </button>
+  </section>
+
+  <!-- Menu Section -->
+  <!-- On Building..... -->
+
+  <section class="inovation p-5 bg-third flex flex-col gap-5 justify-center items-center">
+    <div class="title flex flex-col justify-center items-center gap-2">
+      <h2 class="text-white font-bold font-esamanru text-xl text-center">Inovasi Pizza Baru, 25cm!</h2>
+      <p class="text-white font-esamanru text-center text-sm">Pizza di Eat Pizza lebih dari sekedar enak</p>
+    </div>
+    <img class="mobile w-80 tablet:hidden" src="/image/inovation-img.png" alt="">
+    <img class="tablet hidden tablet:block" src="/image/inovation-tablet.png" alt="">
+  </section>
+
+  <!-- Video Play -->
   <script>
     const video = document.getElementById('eatpizzaVideo');
     const toggleButton = document.getElementById('toggleButton');

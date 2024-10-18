@@ -35,3 +35,8 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   @apply bg-third rounded-md hover:bg-third/50 duration-300;
 }
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
