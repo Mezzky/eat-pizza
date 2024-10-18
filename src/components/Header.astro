@@ -1,53 +1,55 @@
 ---
-// Header.astro
 const styles = {
-  navLinks: 'font-esamanru font-medium text-dark hover:underline',
-  navLunks: 'font-esamanru font-medium text-dark hover:underline',
+  navLinks: 'font-esamanru font-semibold text-dark hover:text-third duration-200',
 };
+
+// Array of navigation links
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Menu', href: '/menu' },
+  { name: 'Store', href: '/store' },
+  { name: 'Partnership', href: '/partner' },
+  { name: 'Contact Us', href: '/contact' },
+];
 ---
-<header class="bg-primary p-4">
+
+<header class="bg-primary px-4 py-2 fixed w-full bg-main z-20">
   <nav class="flex justify-between items-center">
+    <!-- Logo -->
     <a href="#home" class="flex items-center">
       <img src="/image/eatpizza-logo.png" alt="Logo" class="h-8 mr-2" />
     </a>
     
-    <!-- Hamburger icon -->
+    <!-- Hamburger icon for mobile view -->
     <div class="tablet:hidden">
-      <button id="menu-toggle" class="focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
+      <button id="menu-toggle" class="duration-300 ease-in-out">
+        <img src="/image/menu-toggle.png" alt="menu" class="w-12"/>
       </button>
     </div>
 
-    <!-- Navigation Links -->
+    <!-- Navigation Links for larger screens -->
     <ul class="hidden tablet:flex space-x-4" id="menu">
-      <li><a href="/" class={styles.navLinks}>Home</a></li>
-      <li><a href="/about" class={styles.navLinks}>About Us</a></li>
-      <li><a href="/menu" class={styles.navLinks}>Menu</a></li>
-      <li><a href="/store" class={styles.navLinks}>Store</a></li>
-      <li><a href="/partner" class={styles.navLinks}>Partnership</a></li>
-      <li><a href="/contact" class={styles.navLinks}>Contact Us</a></li>
+      {navLinks.map((link) => (
+        <li><a href={link.href} class={styles.navLinks}>{link.name}</a></li>
+      ))}
     </ul>
   </nav>
 
-  <!-- Mobile Menu -->
-  <ul class="tablet:hidden hidden" id="mobile-menu">
-    <li class="p-2"><a href="/" class={styles.navLinks}>Home</a></li>
-    <li class="p-2"><a href="/about" class={styles.navLinks}>About Us</a></li>
-    <li class="p-2"><a href="/menu" class={styles.navLinks}>Menu</a></li>
-    <li class="p-2"><a href="/store" class={styles.navLinks}>Store</a></li>
-    <li class="p-2"><a href="/partner" class={styles.navLinks}>Partnership</a></li>
-    <li class="p-2"><a href="/contact" class={styles.navLinks}>Contact Us</a></li>
+  <!-- Mobile Menu (Initially hidden) -->
+  <ul class="tablet:hidden -translate-x-full transition-transform duration-300 ease-in-out fixed p-5 bg-main w-full h-full left-0" id="mobile-menu">
+    {navLinks.map((link) => (
+      <li class="p-2"><a href={link.href} class={styles.navLinks}>{link.name}</a></li>
+    ))}
   </ul>
 </header>
 
 <script>
-  // JavaScript to toggle mobile menu
+  // JavaScript to toggle the mobile menu
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
 
   menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('-translate-x-full');
   });
 </script>

@@ -1,13 +1,74 @@
 ---
-	import Layout from "../layout/MainLayout.astro"
-	const title = "Home Page"
-	const metaDesc = "Eat Pizza, franchise pizza nomor satu dari Korea, kini hadir di Indonesia! Sajikan pizza persegi panjang inovatif dan menangkan hati pelanggan. Peluang bisnis kuliner menjanjikan menanti Anda."
+import Layout from "../layout/MainLayout.astro";
+const title = "Home Page";
+const metaDesc = "Eat Pizza, franchise pizza nomor satu dari Korea, kini hadir di Indonesia! Sajikan pizza persegi panjang inovatif dan menangkan hati pelanggan. Peluang bisnis kuliner menjanjikan menanti Anda.";
+import { PlayIcon, PauseIcon } from '@heroicons/react/24/solid';
 ---
 
 <Layout title={title} metaDesc={metaDesc}>
-	<div class="title flex flex-col">
-		<h1 class="text-3xl font-esamanru font-bold">{title} Babi Ngepet</h1>
-		<p class="font-gmarket font-medium">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, incidunt laborum dicta voluptatibus dolor quisquam delectus doloribus reprehenderit perspiciatis officiis.</p>
-		<a class="bg-red-600 font-medium text-white p-2 rounded-md w-max font-esamanru" href="/about">Pergi ke About Page!</a>
-	</div>
+  <!-- Home Section -->
+  <section class="title flex flex-col items-center pt-24 px-2 relative">
+    <img class="absolute bottom-0 left-0" src="/image/left-bg.png" alt="">
+    <img class="absolute bottom-0 right-0" src="/image/right-bg.png" alt="">
+    <div class="title flex flex-col gap-1 items-center z-10">
+      <div class="bg-white rounded-md">
+        <h1 class="text-xl text-third px-4 py-2 rounded-md font-esamanru text-shadow-sm text-stroke-1 text-stroke-dark font-semibold">100% Original</h1>
+      </div>
+      <h1 class="text-2xl text-dark font-esamanru font-semibold">25cm Pizza Korea</h1>
+      <h2 class="text-2xl text-center text-stroke-1 font-esamanru font-bold text-stroke-dark text-shadow-sm text-white">Teman Asik di Mana Saja!</h2>
+    </div>
+    <img class="z-10" src="/image/home-img.png" alt="">
+  </section>
+
+  <!-- Banner Section -->
+  <div class="banner z-10 w-full grid grid-cols-custom-70-30">
+    <div class="flex flex-col p-4 justify-center bg-secondary relative">
+      <img class="w-20 absolute right-0" src="/image/banner-icon.png" alt="">
+      <h3 class="text-white text-xl font-bold font-esamanru">“No Pork No Lard.”</h3>
+      <span class="font-esamanru text-white">- Eat Pizza</span>
+    </div>
+    <a class="button flex justify-center items-center bg-third text-center p-2 text-white font-esamanru font-medium text-sm" href="#menu">Jelajahi Lebih Lanjut</a>
+  </div>
+
+  <!-- Video Section -->
+	<section class="video flex justify-center items-center relative">
+		<video id="eatpizzaVideo" class="w-full cursor-pointer" src="/video/eatpizza-video.mp4" loop></video>
+		
+		<!-- Toggle Button -->
+		<button 
+			id="toggleButton" 
+			class="absolute flex justify-center items-center h-10 w-10 text-white opacity-100 transition-opacity duration-300 ease-in-out"
+		>
+			<PlayIcon id="playIcon" class="h-8 w-8 text-white" />
+			<PauseIcon id="pauseIcon" class="h-8 w-8 text-white hidden" /> <!-- Initially hidden -->
+		</button>
+	</section>
+  
+  <script>
+    const video = document.getElementById('eatpizzaVideo');
+    const toggleButton = document.getElementById('toggleButton');
+    const playIcon = document.getElementById('playIcon');
+    const pauseIcon = document.getElementById('pauseIcon');
+
+    // Initially show the play icon
+    playIcon.classList.remove('hidden'); 
+    pauseIcon.classList.add('hidden');
+
+    // Function to toggle play/pause
+    const togglePlayPause = () => {
+      if (video.paused) {
+        video.play();
+        playIcon.classList.add('hidden'); // Hide Play icon
+        pauseIcon.classList.remove('hidden'); // Show Pause icon
+      } else {
+        video.pause();
+        playIcon.classList.remove('hidden'); // Show Play icon
+        pauseIcon.classList.add('hidden'); // Hide Pause icon
+      }
+    };
+
+    // Event listeners
+    toggleButton.addEventListener('click', togglePlayPause);
+    video.addEventListener('click', togglePlayPause);
+  </script>
 </Layout>
