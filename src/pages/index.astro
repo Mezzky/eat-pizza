@@ -1,5 +1,6 @@
 ---
 import Layout from "../layout/MainLayout.astro";
+import Contact from "@/components/Contact.astro";
 const title = "Home Page";
 const metaDesc = "Eat Pizza, franchise pizza nomor satu dari Korea, kini hadir di Indonesia! Sajikan pizza persegi panjang inovatif dan menangkan hati pelanggan. Peluang bisnis kuliner menjanjikan menanti Anda.";
 import { PlayIcon, PauseIcon } from '@heroicons/react/24/solid';
@@ -57,43 +58,93 @@ import { PlayIcon, PauseIcon } from '@heroicons/react/24/solid';
   <!-- About Section -->
   <section class="about grid grid-cols-1 relative">
     <img src="/image/about-img.png" class="w-full" alt="">
-    <div class="about-content flex flex-col justify-center items-center bg-white z-20 relative px-8 pb-8">
+    <div class="about-content flex flex-col justify-center items-center bg-white z-20 relative pb-8">
       <img src="/image/about-shape.png" class="w-full absolute -top-20 z-10" alt="">
-      <img src="/image/cheese-img.png" class="absolute -top-20 z-10 left-0 w-32" alt="">
+      <img src="/image/cheese-img.png" class="absolute -top-24 z-10 left-0 w-32" alt="">
       <h1 class="text-3xl font-esamanru text-dark font-bold z-20">Cerita Kami</h1>
       <div class="stories mt-4 z-20">
-        <div class="story flex flex-col items-center border-b-2 border-slate-950 py-10">
-          <div class="text text-center mb-4">
-            <h4 class="text-lg font-semibold">Adonan Homemade yang Lezat</h4>
-            <p>Nikmati pizza premium yang lebih lembut dan moist, dengan adonan yang diproses langsung di tempat dan diperkaya dengan minyak zaitun murni.</p>
+        <div class="story flex flex-col gap-4 items-center border-b border-dark px-10 pb-10">
+          <div class="text text-center flex flex-col gap-2">
+            <h4 class="text-lg font-light font-esamanru">Adonan Homemade yang Lezat</h4>
+            <p class="font-light font-esamanru text-sm">Nikmati pizza premium yang lebih lembut dan moist, dengan adonan yang diproses langsung di tempat dan diperkaya dengan minyak zaitun murni.</p>
           </div>
           <img src="/image/adonan.png" alt="" class="w-40 rounded-md">
         </div>
-        <div class="story flex flex-col items-center border-b-2 border-slate-950 py-10">
-          <div class="text text-center mb-4">
-            <h4 class="text-lg font-semibold">Adonan Homemade yang Lezat</h4>
-            <p>Nikmati pizza premium yang lebih lembut dan moist, dengan adonan yang diproses langsung di tempat dan diperkaya dengan minyak zaitun murni.</p>
+        <div class="story flex flex-col gap-4 items-center border-b border-dark p-10">
+          <div class="text text-center flex flex-col gap-2">
+            <h4 class="text-lg font-light font-esamanru">Perpaduan 100% Keju Asli</h4>
+            <p class="font-light font-esamanru text-sm">Campuran spesial keju kami, yang 100% alami, memberikan cita rasa keju yang kaya dan tidak bisa kamu temukan di pizza lainnya.</p>
           </div>
-          <img src="/image/adonan.png" alt="" class="w-40 rounded-md">
+          <img src="/image/real-cheese.png" alt="" class="w-40 rounded-md">
         </div>
-        <div class="story flex flex-col items-center border-b-2 border-slate-950 py-10">
-          <div class="text text-center mb-4">
-            <h4 class="text-lg font-semibold">Adonan Homemade yang Lezat</h4>
-            <p>Nikmati pizza premium yang lebih lembut dan moist, dengan adonan yang diproses langsung di tempat dan diperkaya dengan minyak zaitun murni.</p>
+        <div class="story flex flex-col gap-4 items-center border-b border-dark p-10">
+          <div class="text text-center flex flex-col gap-2">
+            <h4 class="text-lg font-light font-esamanru">Bahan Sehat dan Segar</h4>
+            <p class="font-light font-esamanru text-sm">Eat Pizza membuat pizza seperti untuk keluarga sendiri, dengan hanya memilih bahan-bahan yang lebih sehat dan segar.</p>
           </div>
-          <img src="/image/adonan.png" alt="" class="w-40 rounded-md">
+          <img src="/image/ingredients.png" alt="" class="w-40 rounded-md">
         </div>
-        <div class="story flex flex-col items-center border-b-2 border-slate-950 py-10">
-          <div class="text text-center mb-4">
-            <h4 class="text-lg font-semibold">Adonan Homemade yang Lezat</h4>
-            <p>Nikmati pizza premium yang lebih lembut dan moist, dengan adonan yang diproses langsung di tempat dan diperkaya dengan minyak zaitun murni.</p>
+        <div class="story flex flex-col gap-4 items-center p-10">
+          <div class="text text-center flex flex-col gap-2">
+            <h4 class="text-lg font-light font-esamanru">Pizza Handmade di Tempat</h4>
+            <p class="font-light font-esamanru text-sm">Eat Pizza nggak jual pizza beku! Setelah kamu pesan, kami langsung kasih topping di atas adonan yang sudah diproses sempurna, lalu dipanggang langsung di oven.</p>
           </div>
-          <img src="/image/adonan.png" alt="" class="w-40 rounded-md">
+          <img src="/image/handmade.png" alt="" class="w-40 rounded-md">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Benefit Section -->
+  <section class="benefit">
+    <div class="title-box flex justify-center items-center bg-secondary p-5">
+      <div class="text flex flex-col gap-2">
+        <h2 class="font-esamanru text-white font-bold text-3xl w-52">Siap Dalam 5 Menit!</h2>
+        <p class="text-white text-md font-esamanru font-light">Pizza enak, super cepat, dan siapa pun bisa buat!</p>
+      </div>
+      <img src="/image/red-clock.png" alt="">
+    </div>
+    <div class="benefit-box py-8 px-14 relative gap-10 flex flex-col">
+      <img class="w-full inset-0 top-40 absolute" src="/image/pizza-bg.png" alt="">
+      <div class="card relative z-10">
+        <img class="rounded-t-lg" src="/image/learn.gif" alt="">
+        <div class="rounded-b-lg py-5 px-10 text flex flex-col gap-2 justify-center items-center bg-white text-slate-950">
+          <h4 class="font-esamanru text-xl">Belajar Cuma</h4>
+          <h3 class="font-esamanru font-bold text-6xl flex items-end gap-2">10 <span class="text-xl font-semibold">menit</span></h3>
+          <p class="text-center font-gmarket">Semua orang bisa! Dalam 10 menit, langsung paham caranya!</p>
+        </div>
+      </div>
+      <div class="card relative z-10">
+        <img class="rounded-t-lg" src="/image/ready.gif" alt="">
+        <div class="rounded-b-lg py-5 px-10 text flex flex-col gap-2 justify-center items-center bg-white text-slate-950">
+          <h4 class="font-esamanru text-xl">Siap dalam</h4>
+          <h3 class="font-esamanru font-bold text-6xl flex items-end gap-2">20 <span class="text-xl font-semibold">detik</span></h3>
+          <p class="text-center font-gmarket">Tinggal susun bahan, nggak perlu lama!</p>
+        </div>
+      </div>
+      <div class="card relative z-10">
+        <img class="rounded-t-lg" src="/image/cook.gif" alt="">
+        <div class="rounded-b-lg py-5 px-10 text flex flex-col gap-2 justify-center items-center bg-white text-slate-950">
+          <h4 class="font-esamanru text-xl">Pizza jadi dalam</h4>
+          <h3 class="font-esamanru font-bold text-6xl flex items-end gap-2">5 <span class="text-xl font-semibold">menit</span></h3>
+          <p class="text-center font-gmarket">Masuk oven, tunggu 5 menit, pizza siap dimakan!</p>
+        </div>
+      </div>
+      <div class="card relative z-10">
+        <img class="rounded-t-lg" src="/image/fresh.gif" alt="">
+        <div class="rounded-b-lg py-5 px-10 text flex flex-col gap-2 justify-center items-center bg-white text-slate-950">
+          <h4 class="font-esamanru text-xl">Fresh tiap</h4>
+          <h3 class="font-esamanru font-bold text-6xl flex items-end gap-2">30 <span class="text-xl font-semibold">detik</span></h3>
+          <p class="text-center font-gmarket">Pizza selalu fresh, keluar dari oven setiap 30 detik!</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Contact Section -->
+  <section class="contact">
+    <Contact/>
+  </section>
 
   <!-- Video Play -->
   <script>
