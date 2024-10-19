@@ -37,8 +37,8 @@ import { PlayIcon, PauseIcon } from '@heroicons/react/24/solid';
       id="toggleButton" 
       class="absolute flex justify-center items-center h-10 w-10 text-white opacity-100 transition-opacity duration-300 ease-in-out"
     >
-      <PlayIcon id="playIcon" class="h-8 w-8 text-white" />
-      <PauseIcon id="pauseIcon" class="h-8 w-8 text-white hidden" />
+      <PlayIcon id="playIcon" className="h-8 w-8 text-white" />
+      <PauseIcon id="pauseIcon" className="h-8 w-8 text-white hidden" />
     </button>
   </section>
 
@@ -53,6 +53,47 @@ import { PlayIcon, PauseIcon } from '@heroicons/react/24/solid';
     <img class="mobile w-80 tablet:hidden" src="/image/inovation-img.png" alt="">
     <img class="tablet hidden tablet:block" src="/image/inovation-tablet.png" alt="">
   </section>
+
+  <!-- About Section -->
+  <section class="about grid grid-cols-1 relative">
+    <img src="/image/about-img.png" class="w-full" alt="">
+    <div class="about-content flex flex-col justify-center items-center bg-white z-20 relative px-8 pb-8">
+      <img src="/image/about-shape.png" class="w-full absolute -top-20 z-10" alt="">
+      <img src="/image/cheese-img.png" class="absolute -top-20 z-10 left-0 w-32" alt="">
+      <h1 class="text-3xl font-esamanru text-dark font-bold z-20">Cerita Kami</h1>
+      <div class="stories mt-4 z-20">
+        <div class="story flex flex-col items-center border-b-2 border-slate-950 py-10">
+          <div class="text text-center mb-4">
+            <h4 class="text-lg font-semibold">Adonan Homemade yang Lezat</h4>
+            <p>Nikmati pizza premium yang lebih lembut dan moist, dengan adonan yang diproses langsung di tempat dan diperkaya dengan minyak zaitun murni.</p>
+          </div>
+          <img src="/image/adonan.png" alt="" class="w-40 rounded-md">
+        </div>
+        <div class="story flex flex-col items-center border-b-2 border-slate-950 py-10">
+          <div class="text text-center mb-4">
+            <h4 class="text-lg font-semibold">Adonan Homemade yang Lezat</h4>
+            <p>Nikmati pizza premium yang lebih lembut dan moist, dengan adonan yang diproses langsung di tempat dan diperkaya dengan minyak zaitun murni.</p>
+          </div>
+          <img src="/image/adonan.png" alt="" class="w-40 rounded-md">
+        </div>
+        <div class="story flex flex-col items-center border-b-2 border-slate-950 py-10">
+          <div class="text text-center mb-4">
+            <h4 class="text-lg font-semibold">Adonan Homemade yang Lezat</h4>
+            <p>Nikmati pizza premium yang lebih lembut dan moist, dengan adonan yang diproses langsung di tempat dan diperkaya dengan minyak zaitun murni.</p>
+          </div>
+          <img src="/image/adonan.png" alt="" class="w-40 rounded-md">
+        </div>
+        <div class="story flex flex-col items-center border-b-2 border-slate-950 py-10">
+          <div class="text text-center mb-4">
+            <h4 class="text-lg font-semibold">Adonan Homemade yang Lezat</h4>
+            <p>Nikmati pizza premium yang lebih lembut dan moist, dengan adonan yang diproses langsung di tempat dan diperkaya dengan minyak zaitun murni.</p>
+          </div>
+          <img src="/image/adonan.png" alt="" class="w-40 rounded-md">
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Video Play -->
   <script>
