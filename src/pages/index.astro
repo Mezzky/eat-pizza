@@ -159,16 +159,19 @@ import { PlayIcon, PauseIcon } from '@heroicons/react/24/solid';
 
     // Function to toggle play/pause
     const togglePlayPause = () => {
-      if (video.paused) {
-        video.play();
+      const videoElement = document.getElementById('eatpizzaVideo') as HTMLVideoElement; // Type assertion
+
+      if (videoElement.paused) {
+        videoElement.play();
         playIcon.classList.add('hidden'); // Hide Play icon
         pauseIcon.classList.remove('hidden'); // Show Pause icon
       } else {
-        video.pause();
+        videoElement.pause();
         playIcon.classList.remove('hidden'); // Show Play icon
         pauseIcon.classList.add('hidden'); // Hide Pause icon
       }
     };
+
 
     // Event listeners
     toggleButton.addEventListener('click', togglePlayPause);
