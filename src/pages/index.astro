@@ -32,16 +32,21 @@ import { PlayIcon, PauseIcon } from '@heroicons/react/24/solid';
   </div>
 
   <!-- Video Section -->
-  <section class="video flex justify-center items-center relative">
+  <section 
+  id="videoSection"
+  class="video flex justify-center items-center relative"
+  >
     <video id="eatpizzaVideo" class="w-full cursor-pointer" src="/video/eatpizza-video.mp4" loop></video>
+
     <button 
-      id="toggleButton" 
-      class="absolute flex justify-center items-center h-10 w-10 text-white opacity-100 transition-opacity duration-300 ease-in-out"
+    id="toggleButton" 
+    class="absolute flex justify-center items-center h-10 w-10 text-white opacity-0 transition-opacity duration-300 ease-in-out"
     >
-      <PlayIcon id="playIcon" className="h-8 w-8 text-white" />
-      <PauseIcon id="pauseIcon" className="h-8 w-8 text-white hidden" />
+    <PlayIcon id="playIcon" className="h-8 w-8 text-white hidden" />
+    <PauseIcon id="pauseIcon" className="h-8 w-8 text-white hidden" />
     </button>
   </section>
+
 
   <!-- Menu Section -->
   <!-- On Building..... -->
@@ -159,7 +164,9 @@ import { PlayIcon, PauseIcon } from '@heroicons/react/24/solid';
 
     // Function to toggle play/pause
     const togglePlayPause = () => {
-      const videoElement = document.getElementById('eatpizzaVideo') as HTMLVideoElement; // Type assertion
+      const videoElement = document.getElementById('eatpizzaVideo') as HTMLVideoElement;
+      const playIcon = document.getElementById('playIcon');
+      const pauseIcon = document.getElementById('pauseIcon');
 
       if (videoElement.paused) {
         videoElement.play();
@@ -171,6 +178,31 @@ import { PlayIcon, PauseIcon } from '@heroicons/react/24/solid';
         pauseIcon.classList.add('hidden'); // Hide Pause icon
       }
     };
+
+    // Event listeners for showing and hiding the icons on hover
+    const videoSection = document.getElementById('videoSection');
+
+    // Show the play/pause button on hover
+    videoSection.addEventListener('mouseenter', () => {
+      toggleButton.classList.remove('opacity-0');
+      if (video.paused) {
+        playIcon.classList.remove('hidden'); // Show play icon when video is paused
+      } else {
+        pauseIcon.classList.remove('hidden'); // Show pause icon when video is playing
+      }
+    });
+
+    // Hide the play/pause button on unhover
+    videoSection.addEventListener('mouseleave', () => {
+      toggleButton.classList.add('opacity-0'); // Hide the button
+      playIcon.classList.add('hidden'); // Hide play icon
+      pauseIcon.classList.add('hidden'); // Hide pause icon
+    });
+
+    // Add click event listener to toggle play/pause
+    toggleButton.addEventListener('click', togglePlayPause);
+    video.addEventListener('click', togglePlayPause);
+
 
 
     // Event listeners
