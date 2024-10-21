@@ -23,7 +23,7 @@
 
 /* Body Scrollbar */
 body::-webkit-scrollbar {
-  @apply w-3;
+  @apply w-2;
 }
 
 /* Track */

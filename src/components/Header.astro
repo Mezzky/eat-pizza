@@ -1,6 +1,7 @@
 ---
 const styles = {
   navLinks: 'font-esamanru font-semibold text-dark hover:text-third duration-200',
+  navBtn: 'font-esamanru font-medium text-white bg-dark py-2 rounded-sm px-4 hover:bg-third duration-200 laptop:px-6 laptop:py-4',
 };
 
 // Array of navigation links
@@ -10,15 +11,14 @@ const navLinks = [
   { name: 'Menu', href: '/menu' },
   { name: 'Store', href: '/store' },
   { name: 'Partnership', href: '/partner' },
-  { name: 'Contact Us', href: '/contact' },
 ];
 ---
 
-<header class="bg-primary px-4 py-2 fixed w-full bg-main z-50">
+<header class="bg-primary px-4 py-2 fixed w-full bg-main z-50 tablet:p-5 laptop:px-8">
   <nav class="flex justify-between items-center">
     <!-- Logo -->
     <a href="#home" class="flex items-center">
-      <img src="/image/eatpizza-logo.png" alt="Logo" class="h-8 mr-2" />
+      <img src="/image/eatpizza-logo.png" alt="Logo" class="h-8 mr-2 laptop:h-12" />
     </a>
     
     <!-- Hamburger icon for mobile view -->
@@ -33,6 +33,7 @@ const navLinks = [
       {navLinks.map((link) => (
         <li><a href={link.href} class={styles.navLinks}>{link.name}</a></li>
       ))}
+      <li><a href='/contact' class={styles.navBtn}>Contact Us</a></li>
     </ul>
   </nav>
 
@@ -41,6 +42,7 @@ const navLinks = [
     {navLinks.map((link) => (
       <li class="p-2"><a href={link.href} class={styles.navLinks}>{link.name}</a></li>
     ))}
+    <li><a href='/contact' class={styles.navBtn}>Contact Us</a></li>
   </ul>
 </header>
 

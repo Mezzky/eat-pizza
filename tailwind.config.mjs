@@ -25,9 +25,11 @@ export default {
     		},
     		backgroundImage: {
     			'home-bg': "url('/image/section1-bg.png')",
+    			'menu-bg': "url('/image/menu-bg.jpg')",
     		},
     		gridTemplateColumns: {
-    			'custom-70-30': '70% 30%'
+    			'custom-70-30': '70% 30%',
+    			'custom-80-20': '80% 20%'
     		},
     		textShadow: {
     			sm: '1px 1px 2px rgba(0, 0, 0, 0.5)',
