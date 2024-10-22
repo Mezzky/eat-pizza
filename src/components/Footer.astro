@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import eatPizzaLogo from "@/assets/images/eatpizza-logo.png";
+
 // Footer.astro
 const styles = {
   navLinks: "font-esamanru font-medium text-dark hover:text-third duration-200",
@@ -17,7 +20,7 @@ const navLinks = [
 
 <footer class="bg-main text-white text-center flex flex-col">
   <div class="footer-content p-5 flex flex-col justify-center gap-5 laptop:p-10">
-    <img class="w-52 laptop:w-96" src="/image/eatpizza-logo.png" alt="Eat Pizza Logo" />
+    <Image class="w-52 laptop:w-96" src={eatPizzaLogo} alt="Eat Pizza Logo" />
     <!-- Navigation Links -->
     <ul class="flex flex-col items-start laptop:flex-row gap-4 laptop:self-end" id="menu">
       {
