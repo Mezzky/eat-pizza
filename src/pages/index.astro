@@ -1,4 +1,29 @@
 ---
+import { Image } from "astro:assets";
+import leftBg from "@/assets/images/left-bg.png";
+import rightBg from "@/assets/images/right-bg.png";
+import homeImg from "@/assets/images/home-img.png";
+import bannerIcon from "@/assets/images/banner-icon.png";
+import sausage from "@/assets/images/sausage.png";
+import inovationTablet from "@/assets/images/inovation-tablet.png";
+import inovationImg from "@/assets/images/inovation-img.png";
+import aboutImg from "@/assets/images/about-img.png";
+import aboutShape from "@/assets/images/about-shape.png";
+import cheeseImg from "@/assets/images/cheese-img.png";
+import realCheese from "@/assets/images/real-cheese.png";
+import adonan from "@/assets/images/adonan.png";
+import ingredients from "@/assets/images/ingredients.png";
+import handmade from "@/assets/images/handmade.png";
+import redClock from "@/assets/images/red-clock.png";
+import pizzaBg from "@/assets/images/pizza-bg.png";
+import pizzaBgLarge from "@/assets/images/pizza-bg-large.png";
+import learnGif from "@/assets/images/learn.gif";
+import readyGif from "@/assets/images/ready.gif";
+import cookGif from "@/assets/images/cook.gif";
+import freshGif from "@/assets/images/fresh.gif";
+import intersect from "@/assets/images/intersect.png";
+import contactImg from "@/assets/images/contact-img.png";
+
 import Layout from "../layout/MainLayout.astro";
 import ContactForm from "@/components/ContactForm.astro";
 const title = "Home Page";
@@ -10,15 +35,15 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
 <Layout title={title} metaDesc={metaDesc}>
   <!-- Home Section -->
   <section class="title flex flex-col items-center pt-24 px-5 relative tablet:px-10 laptop:px-40">
-    <img
+    <Image
       class="absolute bottom-0 left-0 w-20 tablet:w-28 laptop:w-52"
-      src="/image/left-bg.png"
-      alt=""
+      src={leftBg}
+      alt="Left background"
     />
-    <img
+    <Image
       class="absolute bottom-0 right-0 w-20 tablet:w-28 laptop:w-52"
-      src="/image/right-bg.png"
-      alt=""
+      src={rightBg}
+      alt="Right background"
     />
     <div class="title flex flex-col gap-1 items-center z-10 laptop:gap-5">
       <div class="bg-white rounded-md">
@@ -37,7 +62,7 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
         Teman Asik di Mana Saja!
       </h2>
     </div>
-    <img class="z-10" src="/image/home-img.png" alt="" />
+    <Image class="z-10" src={homeImg} alt="Home" quality="max" />
   </section>
 
   <!-- Banner Section -->
@@ -45,15 +70,15 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
     <div
       class="flex flex-col p-4 justify-center bg-secondary relative tablet:p-6 laptop:py-16 laptop:px-12"
     >
-      <img
+      <Image
         class="w-20 absolute right-5 top-10 lg:top-6 tablet:w-32 tablet:right-10 tablet:top-4 laptop:w-80 laptop:"
-        src="/image/banner-icon.png"
-        alt=""
+        src={bannerIcon}
+        alt="Banner icon"
       />
-      <img
+      <Image
         class="w-14 z-10 absolute -right-6 tablet:w-20 tablet:-right-24 laptop:w-40"
-        src="/image/sausage.png"
-        alt=""
+        src={sausage}
+        alt="Sausage"
       />
       <h3 class="text-white text-lg font-bold font-esamanru tablet:text-2xl laptop:text-5xl">
         “No Pork No Lard.”
@@ -110,25 +135,25 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
         Pizza di Eat Pizza lebih dari sekedar enak
       </p>
     </div>
-    <img class="mobile laptop:hidden" src="/image/inovation-img.png" alt="" />
-    <img class="tablet hidden laptop:block" src="/image/inovation-tablet.png" alt="" />
+    <Image class="mobile laptop:hidden" src={inovationImg} alt="Inovation" />
+    <Image class="tablet hidden laptop:block" src={inovationTablet} alt="Inovation tablet" />
   </section>
 
   <!-- About Section -->
   <section class="about grid grid-cols-1 relative">
-    <img src="/image/about-img.png" class="w-full" alt="" />
+    <Image src={aboutImg} class="w-full" alt="about" />
     <div
       class="about-content flex flex-col justify-center items-center bg-white z-20 relative pb-8 laptop:gap-20"
     >
-      <img
-        src="/image/about-shape.png"
+      <Image
+        src={aboutShape}
         class="w-full left-0 right-0 absolute -top-16 z-10 tablet:-top-28 laptop:-top-64"
-        alt=""
+        alt="About shape"
       />
-      <img
-        src="/image/cheese-img.png"
+      <Image
+        src={cheeseImg}
         class="absolute -top-24 z-10 left-0 w-32 laptop:w-96 laptop:left-20 laptop:-top-72"
-        alt=""
+        alt="Cheese"
       />
       <h1 class="text-3xl font-esamanru text-dark font-bold z-20 tablet:text-4xl laptop:text-7xl">
         Cerita Kami
@@ -148,9 +173,9 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
               langsung di tempat dan diperkaya dengan minyak zaitun murni.
             </p>
           </div>
-          <img
-            src="/image/adonan.png"
-            alt=""
+          <Image
+            src={adonan}
+            alt="Adonan"
             class="relative right-0 w-52 rounded-md group-hover:w-96 group-hover:rounded-full duration-300"
           />
         </div>
@@ -168,9 +193,9 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
               tidak bisa kamu temukan di pizza lainnya.
             </p>
           </div>
-          <img
-            src="/image/real-cheese.png"
-            alt=""
+          <Image
+            src={realCheese}
+            alt="Real cheese"
             class="relative right-0 w-52 rounded-md group-hover:w-96 group-hover:rounded-full duration-300"
           />
         </div>
@@ -188,9 +213,9 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
               bahan-bahan yang lebih sehat dan segar.
             </p>
           </div>
-          <img
-            src="/image/ingredients.png"
-            alt=""
+          <Image
+            src={ingredients}
+            alt="Ingredients"
             class="relative right-0 w-52 rounded-md group-hover:w-96 group-hover:rounded-full duration-300"
           />
         </div>
@@ -208,9 +233,9 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
               atas adonan yang sudah diproses sempurna, lalu dipanggang langsung di oven.
             </p>
           </div>
-          <img
-            src="/image/handmade.png"
-            alt=""
+          <Image
+            src={handmade}
+            alt="Handmade"
             class="relative right-0 w-52 rounded-md group-hover:w-96 group-hover:rounded-full duration-300"
           />
         </div>
@@ -233,19 +258,19 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
           Pizza enak, super cepat, dan siapa pun bisa buat!
         </p>
       </div>
-      <img class="laptop:w-96" src="/image/red-clock.png" alt="" />
+      <Image class="laptop:w-96" src={redClock} alt="Red clock" />
     </div>
     <div
       class="benefit-box py-8 px-14 relative grid grid-cols-1 gap-10 tablet:grid-cols-2 tablet:gap-5 tablet:p-10 laptop:p-40 laptop:gap-10"
     >
-      <img class="w-full inset-0 top-40 absolute tablet:hidden" src="/image/pizza-bg.png" alt="" />
-      <img
+      <Image class="w-full inset-0 top-40 absolute tablet:hidden" src={pizzaBg} alt="Pizza" />
+      <Image
         class="w-full inset-0 top-12 absolute tablet:block"
-        src="/image/pizza-bg-large.png"
-        alt=""
+        src={pizzaBgLarge}
+        alt="Pizza large"
       />
       <div class="card relative z-10 flex flex-col">
-        <img class="rounded-t-lg w-full laptop:rounded-t-2xl" src="/image/learn.gif" alt="" />
+        <Image class="rounded-t-lg w-full laptop:rounded-t-2xl" src={learnGif} alt="Learn" />
         <div
           class="rounded-b-lg py-5 px-10 text flex flex-col gap-2 justify-center items-center bg-white text-slate-950 laptop:rounded-b-2xl laptop:px-40 laptop:py-10 laptop:gap-8"
         >
@@ -259,7 +284,7 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
         </div>
       </div>
       <div class="card relative z-10 flex flex-col">
-        <img class="rounded-t-lg w-full laptop:rounded-t-2xl" src="/image/ready.gif" alt="" />
+        <Image class="rounded-t-lg w-full laptop:rounded-t-2xl" src={readyGif} alt="Ready" />
         <div
           class="rounded-b-lg py-5 px-10 text flex flex-col gap-2 justify-center items-center bg-white text-slate-950 laptop:rounded-b-2xl laptop:px-40 laptop:py-10 laptop:gap-8"
         >
@@ -273,7 +298,7 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
         </div>
       </div>
       <div class="card relative z-10 flex flex-col">
-        <img class="rounded-t-lg w-full laptop:rounded-t-2xl" src="/image/cook.gif" alt="" />
+        <Image class="rounded-t-lg w-full laptop:rounded-t-2xl" src={cookGif} alt="Cook" />
         <div
           class="rounded-b-lg py-5 px-10 text flex flex-col gap-2 justify-center items-center bg-white text-slate-950 laptop:rounded-b-2xl laptop:px-40 laptop:py-10 laptop:gap-8"
         >
@@ -287,7 +312,7 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
         </div>
       </div>
       <div class="card relative z-10 flex flex-col">
-        <img class="rounded-t-lg w-full laptop:rounded-t-2xl" src="/image/fresh.gif" alt="" />
+        <Image class="rounded-t-lg w-full laptop:rounded-t-2xl" src={freshGif} alt="Fresh" />
         <div
           class="rounded-b-lg py-5 px-10 text flex flex-col gap-2 justify-center items-center bg-white text-slate-950 laptop:rounded-b-2xl laptop:px-40 laptop:py-10 laptop:gap-8"
         >
@@ -305,11 +330,11 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
 
   <!-- Contact Section -->
   <section class="contact relative py-10 px-5 bg-third tablet:p-10 laptop:px-40 laptop:py-20">
-    <img class="absolute -right-4 -top-4 laptop:w-96" src="/image/intersect.png" alt="" />
-    <img class="absolute -left-4 -bottom-4 laptop:w-96" src="/image/intersect.png" alt="" />
+    <Image class="absolute -right-4 -top-4 laptop:w-96" src={intersect} alt="Intersect" />
+    <Image class="absolute -left-4 -bottom-4 laptop:w-96" src={intersect} alt="Intersect" />
     <div class="contact-box grid laptop:grid-cols-custom-70-30">
       <ContactForm />
-      <img class="z-10 hidden laptop:flex laptop:h-full" src="/image/contact-img.png" alt="" />
+      <Image class="z-10 hidden laptop:flex laptop:h-full" src={contactImg} alt="Contact" />
     </div>
   </section>
 
