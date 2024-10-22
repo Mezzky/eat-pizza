@@ -1,6 +1,6 @@
 # Eat Pizza
 
-![Project Banner](./public/banner/banner.png)
+![Project Banner](./src/assets/images/banner.png)
 
 ## Description
 
