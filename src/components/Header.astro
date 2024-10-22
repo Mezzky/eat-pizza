@@ -1,16 +1,17 @@
 ---
 const styles = {
-  navLinks: 'font-esamanru font-semibold text-dark hover:text-third duration-200',
-  navBtn: 'font-esamanru font-medium text-white bg-dark py-2 rounded-sm px-4 hover:bg-third duration-200 laptop:px-6 laptop:py-4',
+  navLinks: "font-esamanru font-semibold text-dark hover:text-third duration-200",
+  navBtn:
+    "font-esamanru font-medium text-white bg-dark py-2 rounded-sm px-4 hover:bg-third duration-200 laptop:px-6 laptop:py-4",
 };
 
 // Array of navigation links
 const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/about' },
-  { name: 'Menu', href: '/menu' },
-  { name: 'Store', href: '/store' },
-  { name: 'Partnership', href: '/partner' },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Menu", href: "/menu" },
+  { name: "Store", href: "/store" },
+  { name: "Partnership", href: "/partner" },
 ];
 ---
 
@@ -20,38 +21,53 @@ const navLinks = [
     <a href="#home" class="flex items-center">
       <img src="/image/eatpizza-logo.png" alt="Logo" class="h-8 mr-2 laptop:h-12" />
     </a>
-    
+
     <!-- Hamburger icon for mobile view -->
     <div class="tablet:hidden">
       <button id="menu-toggle" class="duration-300 ease-in-out">
-        <img src="/image/menu-toggle.png" alt="menu" class="w-12"/>
+        <img src="/image/menu-toggle.png" alt="menu" class="w-12" />
       </button>
     </div>
 
     <!-- Navigation Links for larger screens -->
     <ul class="hidden tablet:flex space-x-4" id="menu">
-      {navLinks.map((link) => (
-        <li><a href={link.href} class={styles.navLinks}>{link.name}</a></li>
-      ))}
-      <li><a href='/contact' class={styles.navBtn}>Contact Us</a></li>
+      {
+        navLinks.map((link) => (
+          <li>
+            <a href={link.href} class={styles.navLinks}>
+              {link.name}
+            </a>
+          </li>
+        ))
+      }
+      <li><a href="/contact" class={styles.navBtn}>Contact Us</a></li>
     </ul>
   </nav>
 
   <!-- Mobile Menu (Initially hidden) -->
-  <ul class="tablet:hidden -translate-x-full transition-transform duration-300 ease-in-out fixed p-5 bg-main w-full h-full left-0" id="mobile-menu">
-    {navLinks.map((link) => (
-      <li class="p-2"><a href={link.href} class={styles.navLinks}>{link.name}</a></li>
-    ))}
-    <li><a href='/contact' class={styles.navBtn}>Contact Us</a></li>
+  <ul
+    class="tablet:hidden -translate-x-full transition-transform duration-300 ease-in-out fixed p-5 bg-main w-full h-full left-0"
+    id="mobile-menu"
+  >
+    {
+      navLinks.map((link) => (
+        <li class="p-2">
+          <a href={link.href} class={styles.navLinks}>
+            {link.name}
+          </a>
+        </li>
+      ))
+    }
+    <li><a href="/contact" class={styles.navBtn}>Contact Us</a></li>
   </ul>
 </header>
 
 <script>
   // JavaScript to toggle the mobile menu
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
 
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('-translate-x-full');
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("-translate-x-full");
   });
 </script>

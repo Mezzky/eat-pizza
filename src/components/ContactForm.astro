@@ -1,36 +1,81 @@
 ---
 // Contact.astro
-import Button from "./Button.astro"
+import Button from "./Button.astro";
 ---
-<div class="contact-form relative z-10 flex flex-col justify-center bg-white p-5 gap-6 rounded-lg tablet:p-10 laptop:rounded-none laptop:rounded-tl-lg laptop:rounded-bl-lg laptop:gap-10">
+
+<div
+  class="contact-form relative z-10 flex flex-col justify-center bg-white p-5 gap-6 rounded-lg tablet:p-10 laptop:rounded-none laptop:rounded-tl-lg laptop:rounded-bl-lg laptop:gap-10"
+>
   <div class="title flex flex-col gap-2 laptop:w-[800px] laptop:gap-5">
-    <h2 class="text-black font-esamanru text-xl font-semibold laptop:text-5xl">Tertarik jadi bagian dari keluarga besar EatPizza Indonesia?</h2>
-    <p class="text-black font-esamanru text-sm font-medium laptop:text-3xl">Isi form di bawah ini untuk mulai perjalanan seru bareng kami!</p>
+    <h2 class="text-black font-esamanru text-xl font-semibold laptop:text-5xl">
+      Tertarik jadi bagian dari keluarga besar EatPizza Indonesia?
+    </h2>
+    <p class="text-black font-esamanru text-sm font-medium laptop:text-3xl">
+      Isi form di bawah ini untuk mulai perjalanan seru bareng kami!
+    </p>
   </div>
   <form class="flex flex-col gap-2 w-full" action="">
     <div class="input-row grid grid-cols-2 gap-2">
       <div class="input flex flex-col gap-1">
-        <label class="font-esamanru text-black text-sm laptop:text-lg" for="firstName">Nama Depan</label>
-        <input required placeholder="Agus" class=" text-slate-500 focus:ring-slate-900 p-2 w-full text-sm laptop:text-lg rounded-sm border border-slate-500" type="text" name="firstName" id="firstName">
+        <label class="font-esamanru text-black text-sm laptop:text-lg" for="firstName"
+          >Nama Depan</label
+        >
+        <input
+          required
+          placeholder="Agus"
+          class="text-slate-500 focus:ring-slate-900 p-2 w-full text-sm laptop:text-lg rounded-sm border border-slate-500"
+          type="text"
+          name="firstName"
+          id="firstName"
+        />
       </div>
       <div class="input flex flex-col gap-1">
-        <label class="font-esamanru text-black text-sm laptop:text-lg" for="lastName">Nama Belakang</label>
-        <input required placeholder="Setiawan" class=" text-slate-500 focus:ring-slate-900 p-2 w-full text-sm laptop:text-lg rounded-sm border border-slate-500" type="text" name="lastName" id="lastName">
+        <label class="font-esamanru text-black text-sm laptop:text-lg" for="lastName"
+          >Nama Belakang</label
+        >
+        <input
+          required
+          placeholder="Setiawan"
+          class="text-slate-500 focus:ring-slate-900 p-2 w-full text-sm laptop:text-lg rounded-sm border border-slate-500"
+          type="text"
+          name="lastName"
+          id="lastName"
+        />
       </div>
     </div>
     <div class="input-row grid grid-cols-2 gap-2">
       <div class="input flex flex-col gap-1">
-        <label class="font-esamanru text-black text-sm laptop:text-lg" for="phoneNumber">Nomor HP</label>
-        <input required placeholder="+62" class=" text-slate-500 focus:ring-slate-900 p-2 w-full text-sm laptop:text-lg rounded-sm border border-slate-500" type="number" name="phoneNumber" id="phoneNumber">
+        <label class="font-esamanru text-black text-sm laptop:text-lg" for="phoneNumber"
+          >Nomor HP</label
+        >
+        <input
+          required
+          placeholder="+62"
+          class="text-slate-500 focus:ring-slate-900 p-2 w-full text-sm laptop:text-lg rounded-sm border border-slate-500"
+          type="number"
+          name="phoneNumber"
+          id="phoneNumber"
+        />
       </div>
       <div class="input flex flex-col gap-1">
         <label class="font-esamanru text-black text-sm laptop:text-lg" for="userEmail">Email</label>
-        <input required placeholder="agussetiawan@gmail.com" class=" text-slate-500 focus:ring-slate-900 p-2 w-full text-sm laptop:text-lg rounded-sm border border-slate-500" type="email" name="userEmail" id="userEmail">
+        <input
+          required
+          placeholder="agussetiawan@gmail.com"
+          class="text-slate-500 focus:ring-slate-900 p-2 w-full text-sm laptop:text-lg rounded-sm border border-slate-500"
+          type="email"
+          name="userEmail"
+          id="userEmail"
+        />
       </div>
     </div>
     <div class="input flex flex-col gap-1">
-      <label class="font-esamanru text-black text-sm laptop:text-lg" for="teritori">Teritori</label>
-      <select class=" text-slate-500 focus:ring-slate-900 p-2 w-full text-sm laptop:text-lg rounded-sm border border-slate-500" name="teritori" id="teritori">
+      <label class="font-esamanru text-black text-sm laptop:text-lg" for="teritori">Domisili</label>
+      <select
+        class="text-slate-500 focus:ring-slate-900 p-2 w-full text-sm laptop:text-lg rounded-sm border border-slate-500"
+        name="teritori"
+        id="teritori"
+      >
         <option value="denpasar">Denpasar</option>
         <option value="gianyar">Gianyar</option>
         <option value="badung">Badung</option>
@@ -38,10 +83,21 @@ import Button from "./Button.astro"
       </select>
     </div>
     <div class="input flex flex-col gap-1">
-      <label class="font-esamanru text-black text-sm laptop:text-lg" for="userEmail">Komentar</label>
-      <textarea placeholder="Komentar disini..." class=" h-80 text-slate-500 focus:ring-slate-900 p-2 w-full text-sm laptop:text-lg rounded-sm border border-slate-500" name="userComment" id="userComment"></textarea>
+      <label class="font-esamanru text-black text-sm laptop:text-lg" for="userEmail">Komentar</label
+      >
+      <textarea
+        placeholder="Komentar disini..."
+        class="h-80 text-slate-500 focus:ring-slate-900 p-2 w-full text-sm laptop:text-lg rounded-sm border border-slate-500"
+        name="userComment"
+        id="userComment"></textarea>
     </div>
-    <p class="font-esamanru font-light text-slate-900 text-sm laptop:text-lg laptop:font-medium">Pengajuan pernyataan ini tidak mewajibkan Anda atau kami untuk berpartisipasi atau memberi Anda peluang bisnis apa pun</p>
-    <button class="bg-third text-white hover:bg-opacity-80 py-2 px-4 rounded-md laptop:text-xl font-medium" type="submit">Kirim</button>
+    <p class="font-esamanru font-light text-slate-900 text-sm laptop:text-lg laptop:font-medium">
+      Pengajuan pernyataan ini tidak mewajibkan Anda atau kami untuk berpartisipasi atau memberi
+      Anda peluang bisnis apa pun
+    </p>
+    <button
+      class="bg-third text-white hover:bg-opacity-80 py-2 px-4 rounded-md laptop:text-xl font-medium"
+      type="submit">Kirim</button
+    >
   </form>
 </div>
