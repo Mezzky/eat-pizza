@@ -30,6 +30,7 @@ const title = "Home Page";
 const metaDesc =
   "Eat Pizza, franchise pizza nomor satu dari Korea, kini hadir di Indonesia! Sajikan pizza persegi panjang inovatif dan menangkan hati pelanggan. Peluang bisnis kuliner menjanjikan menanti Anda.";
 import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
+import { CarouselMenu } from "@/components/carousel-menu";
 ---
 
 <Layout title={title} metaDesc={metaDesc}>
@@ -53,7 +54,9 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
           100% Original
         </h1>
       </div>
-      <h1 class="text-2xl text-dark font-esamanru font-semibold tablet:text-3xl laptop:text-6xl desktop:text-8xl">
+      <h1
+        class="text-2xl text-dark font-esamanru font-semibold tablet:text-3xl laptop:text-6xl desktop:text-8xl"
+      >
         25cm Pizza Korea
       </h1>
       <h2
@@ -80,7 +83,9 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
         src={sausage}
         alt="Sausage"
       />
-      <h3 class="text-white text-lg font-bold font-esamanru tablet:text-2xl laptop:text-3xl desktop:text-5xl">
+      <h3
+        class="text-white text-lg font-bold font-esamanru tablet:text-2xl laptop:text-3xl desktop:text-5xl"
+      >
         “No Pork No Lard.”
       </h3>
       <span class="font-esamanru text-white desktop:text-3xl">- Eat Pizza</span>
@@ -114,6 +119,8 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
       Menu
     </h2>
     <!-- Carousel Goes Here -->
+    <CarouselMenu client:idle />
+
     <a
       class="bg-third text-white hover:bg-dark duration-300 py-2 px-4 rounded-md font-medium"
       href="/menu">Lihat Lebih Lanjut</a
@@ -131,7 +138,9 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
       >
         Inovasi Pizza Baru, 25cm!
       </h2>
-      <p class="text-white font-esamanru text-center text-sm tablet:text-lg laptop:text-xl desktop:text-4xl">
+      <p
+        class="text-white font-esamanru text-center text-sm tablet:text-lg laptop:text-xl desktop:text-4xl"
+      >
         Pizza di Eat Pizza lebih dari sekedar enak
       </p>
     </div>
@@ -155,7 +164,9 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
         class="absolute -top-24 z-10 left-0 w-32 laptop:w-52 laptop:-top-36 desktop:w-96 desktop:left-20 desktop:-top-72"
         alt="Cheese"
       />
-      <h1 class="text-3xl font-esamanru text-dark font-bold z-20 tablet:text-4xl laptop:text-5xl desktop:text-7xl">
+      <h1
+        class="text-3xl font-esamanru text-dark font-bold z-20 tablet:text-4xl laptop:text-5xl desktop:text-7xl"
+      >
         Cerita Kami
       </h1>
       <div class="stories mt-4 z-20">
@@ -168,7 +179,9 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
             >
               Adonan Homemade yang Lezat
             </h4>
-            <p class="font-light font-esamanru text-sm laptop:text-base desktop:text-xl desktop:font-medium">
+            <p
+              class="font-light font-esamanru text-sm laptop:text-base desktop:text-xl desktop:font-medium"
+            >
               Nikmati pizza premium yang lebih lembut dan moist, dengan adonan yang diproses
               langsung di tempat dan diperkaya dengan minyak zaitun murni.
             </p>
@@ -188,7 +201,9 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
             >
               Perpaduan 100% Keju Asli
             </h4>
-            <p class="font-light font-esamanru text-sm laptop:text-base desktop:text-xl desktop:font-medium">
+            <p
+              class="font-light font-esamanru text-sm laptop:text-base desktop:text-xl desktop:font-medium"
+            >
               Campuran spesial keju kami, yang 100% alami, memberikan cita rasa keju yang kaya dan
               tidak bisa kamu temukan di pizza lainnya.
             </p>
@@ -208,7 +223,9 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
             >
               Bahan Sehat dan Segar
             </h4>
-            <p class="font-light font-esamanru text-sm laptop:text-base desktop:text-xl desktop:font-medium">
+            <p
+              class="font-light font-esamanru text-sm laptop:text-base desktop:text-xl desktop:font-medium"
+            >
               Eat Pizza membuat pizza seperti untuk keluarga sendiri, dengan hanya memilih
               bahan-bahan yang lebih sehat dan segar.
             </p>
@@ -228,7 +245,9 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
             >
               Pizza Handmade di Tempat
             </h4>
-            <p class="font-light font-esamanru text-sm laptop:text-base desktop:text-xl desktop:font-medium">
+            <p
+              class="font-light font-esamanru text-sm laptop:text-base desktop:text-xl desktop:font-medium"
+            >
               Eat Pizza nggak jual pizza beku! Setelah kamu pesan, kami langsung kasih topping di
               atas adonan yang sudah diproses sempurna, lalu dipanggang langsung di oven.
             </p>
@@ -340,7 +359,7 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
 
   <!-- Video Play -->
   <script>
-    const video = document.getElementById("eatpizzaVideo");
+    const video = document.getElementById("eatpizzaVideo") as HTMLVideoElement;
     const toggleButton = document.getElementById("toggleButton");
     const playIcon = document.getElementById("playIcon");
     const pauseIcon = document.getElementById("pauseIcon");
@@ -351,16 +370,12 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
 
     // Function to toggle play/pause
     const togglePlayPause = () => {
-      const videoElement = document.getElementById("eatpizzaVideo") as HTMLVideoElement;
-      const playIcon = document.getElementById("playIcon");
-      const pauseIcon = document.getElementById("pauseIcon");
-
-      if (videoElement.paused) {
-        videoElement.play();
+      if (video.paused) {
+        video.play();
         playIcon.classList.add("hidden"); // Hide Play icon
         pauseIcon.classList.remove("hidden"); // Show Pause icon
       } else {
-        videoElement.pause();
+        video.pause();
         playIcon.classList.remove("hidden"); // Show Play icon
         pauseIcon.classList.add("hidden"); // Hide Pause icon
       }
@@ -387,10 +402,6 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
     });
 
     // Add click event listener to toggle play/pause
-    toggleButton.addEventListener("click", togglePlayPause);
-    video.addEventListener("click", togglePlayPause);
-
-    // Event listeners
     toggleButton.addEventListener("click", togglePlayPause);
     video.addEventListener("click", togglePlayPause);
   </script>
