@@ -24,8 +24,8 @@ export default {
         black: "#2D2926",
       },
       backgroundImage: {
-        "home-bg": "url('/image/section1-bg.png')",
-        "menu-bg": "url('/image/menu-bg.jpg')",
+        "home-bg": "url('./src/assets/images/section1-bg.png')",
+        "menu-bg": "url('./src/assets/images/menu-bg.jpg')",
       },
       gridTemplateColumns: {
         "custom-70-30": "70% 30%",
