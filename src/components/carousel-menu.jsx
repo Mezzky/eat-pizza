@@ -6,7 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { CAROUSEL_MENU } from "@/constants";
+import { MENU_PIZZA } from "@/constants";
 
 export function CarouselMenu() {
   return (
@@ -18,7 +18,7 @@ export function CarouselMenu() {
       }}
     >
       <CarouselContent>
-        {CAROUSEL_MENU.map(({ img, name, description }) => (
+        {MENU_PIZZA.slice(0, 6).map(({ img, name, description }) => (
           <CarouselItem key={name} className="tablet:basis-1/2 laptop:basis-1/3">
             <Card>
               <CardContent className="flex flex-col items-center justify-center space-y-4 p-6 text-center">

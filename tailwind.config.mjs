@@ -64,10 +64,12 @@ export default {
       },
       backgroundImage: {
         "home-bg": "url('./src/assets/images/section1-bg.png')",
-        "menu-bg": "url('./src/assets/images/menu-bg.jpg')",
+        "wood-bg": "url('./src/assets/images/menu-bg.jpg')",
         "partner-bg": "url('./src/assets/images/partnership-bg.png')",
         "contact": "url('./src/assets/images/contact-img.jpg')",
         "store-bg": "url('./src/assets/images/store-bg.png')",
+        "menu-title": "url('./src/assets/images/menu-title.png')",
+        "menu-bg": "url('./src/assets/images/menu-bg.png')",
       },
       gridTemplateColumns: {
         "custom-70-30": "70% 30%",
