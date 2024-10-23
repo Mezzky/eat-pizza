@@ -8,7 +8,6 @@ import readyGif from "@/assets/images/ready.gif";
 import cookGif from "@/assets/images/cook.gif";
 import freshGif from "@/assets/images/fresh.gif";
 import intersect from "@/assets/images/intersect.png";
-import contactImg from "@/assets/images/contact-img.png";
 
 import ContactForm from "@/components/ContactForm.astro";
 
@@ -276,9 +275,9 @@ const boxStyle = {
   <section class="contact relative py-10 px-5 bg-third tablet:p-10 laptop:px-20 laptop:py-20">
     <Image class="absolute -right-4 -top-4 laptop:w-80" src={intersect} alt="Intersect" />
     <Image class="absolute -left-4 -bottom-4 laptop:w-80" src={intersect} alt="Intersect" />
-    <div class="contact-box grid laptop:grid-cols-custom-70-30">
+    <div class="contact-box grid relative z-10 laptop:grid-cols-custom-70-30">
       <ContactForm />
-      <Image class="z-10 hidden laptop:flex laptop:h-full" src={contactImg} alt="Contact" />
+      <div class="bg-contact bg-no-repeat bg-cover bg-center z1 laptop:rounded-tr-lg laptop:rounded-br-lg"></div>
     </div>
   </section>
 </Layout>
