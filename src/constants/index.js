@@ -10,7 +10,6 @@ import sweetBulgogi from "@/assets/images/menu/sweet-bulgogi.png";
 import chickenLongSausage from "@/assets/images/menu/chicken-long-sausage.png";
 import hotSpicyChicken from "@/assets/images/menu/hot-spicy-chicken.png";
 
-
 export const MENU_PIZZA = [
   {
     img: realCheese,
