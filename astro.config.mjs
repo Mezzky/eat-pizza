@@ -10,6 +10,4 @@ export default defineConfig({
     }),
     react(),
   ],
-  site: "https://mezzky.github.io",
-  base: 'eat-pizza',
 });
