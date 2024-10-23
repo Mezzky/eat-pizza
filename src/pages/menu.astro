@@ -20,7 +20,7 @@ const metaDesc = "Jelajahi beragam menu pizza persegi panjang inovatif dari Eat 
       </div>
       <div class="menu-box px-5 pt-6 grid grid-cols-1 gap-5 place-items-center md:px-10 lg:px-20 tablet:px-16 tablet:grid-cols-2 laptop:grid-cols-3 laptop:gap-8 desktop:pt-20 desktop:px-80">
         {MENU_PIZZA.map(({ img, name, description }) => (
-          <div class="menu-card relative flex flex-col items-center justify-center rounded-xl -mt-32">
+          <div data-aos="zoom-in" class="menu-card relative flex flex-col items-center justify-center rounded-xl -mt-32">
             <Image src={img} class="relative -bottom-36 w-40" alt={name} />
             <div class="boxcard h-[300px] bg-white py-0 px-4 rounded-xl pt-32 flex flex-col justify-center items-center gap-2 desktop:w-[400px]">
               <h3 class="font-esamanru mt-2 text-2xl font-semibold uppercase text-third text-center">{name}</h3>
@@ -31,4 +31,14 @@ const metaDesc = "Jelajahi beragam menu pizza persegi panjang inovatif dari Eat 
       </div>
     </div>
   </section>
+
+  <script>
+    import AOS from 'aos';
+    import 'aos/dist/aos.css';
+  
+    AOS.init({
+      duration: 500,
+      easing: 'ease-in-out',
+    });
+  </script>
 </Layout>
