@@ -4,30 +4,45 @@ import { Image } from "astro:assets";
 import { MENU_PIZZA } from "@/constants";
 import Layout from "../layout/MainLayout.astro";
 const title = "Menu Page";
-const metaDesc = "Jelajahi beragam menu pizza persegi panjang inovatif dari Eat Pizza! Mulai dari klasik hingga fusion, pasti ada yang sesuai selera Anda. Nikmati kelezatan pizza berkualitas dengan harga terjangkau.";
+const metaDesc =
+  "Jelajahi beragam menu pizza persegi panjang inovatif dari Eat Pizza! Mulai dari klasik hingga fusion, pasti ada yang sesuai selera Anda. Nikmati kelezatan pizza berkualitas dengan harga terjangkau.";
 ---
 
 <Layout title={title} metaDesc={metaDesc}>
   <!-- About Section -->
   <section class="about grid grid-cols-1 relative pt-20">
-    <div class="title relative flex justify-center items-center py-20 bg-menu-title bg-cover bg-center bg-no-repeat">
+    <div
+      class="title relative flex justify-center items-center py-20 bg-menu-title bg-cover bg-center bg-no-repeat"
+    >
       <div class="overlay w-full h-full bg-black/50 absolute"></div>
-      <h1 class="font-esamanru font-bold text-3xl text-white text-center z-10 tablet:text-6xl">Menu</h1>
+      <h1 class="font-esamanru font-bold text-3xl text-white text-center z-10 tablet:text-6xl">
+        Menu
+      </h1>
     </div>
     <div class="menu-list relative py-20 bg-menu-bg bg-no-repeat bg-cover bg-top">
-      <div class="title-menu flex flex-col items-center justify-center absolute top-0 left-1/2 transform -translate-x-1/2 bg-third rounded-b-full px-5 pt-3 pb-8 tablet:px-8 tablet:pt-5 tablet:pb-12">
+      <div
+        class="title-menu flex flex-col items-center justify-center absolute top-0 left-1/2 transform -translate-x-1/2 bg-third rounded-b-full px-5 pt-3 pb-8 tablet:px-8 tablet:pt-5 tablet:pb-12"
+      >
         <h2 class="font-esamanru font-bold text-2xl text-white tablet:text-4xl">Pizza</h2>
       </div>
-      <div class="menu-box px-5 pt-6 grid grid-cols-1 gap-5 place-items-center md:px-10 lg:px-20 tablet:px-16 tablet:grid-cols-2 laptop:grid-cols-3 laptop:gap-8 desktop:pt-20 desktop:px-80">
-        {MENU_PIZZA.map(({ img, name, description }) => (
-          <div class="menu-card relative flex flex-col items-center justify-center rounded-xl -mt-32">
-            <Image src={img} class="relative -bottom-36 w-40" alt={name} />
-            <div class="boxcard h-[300px] bg-white py-0 px-4 rounded-xl pt-32 flex flex-col justify-center items-center gap-2 desktop:w-[400px]">
-              <h3 class="font-esamanru mt-2 text-2xl font-semibold uppercase text-third text-center">{name}</h3>
-              <p class="font-esamanru font-normal capitalize text-dark text-center">{description}</p>
+      <div
+        class="menu-box px-5 pt-6 grid grid-cols-1 gap-5 place-items-center md:px-10 lg:px-20 tablet:px-16 tablet:grid-cols-2 laptop:grid-cols-3 laptop:gap-8 desktop:pt-20 desktop:px-80"
+      >
+        {
+          MENU_PIZZA.map(({ img, name, description }) => (
+            <div class="menu-card relative flex flex-col items-center justify-center rounded-xl -mt-32">
+              <Image src={img} class="relative -bottom-36 w-40" alt={name} />
+              <div class="boxcard h-[300px] bg-white py-0 px-4 rounded-xl pt-32 flex flex-col justify-center items-center gap-2 desktop:w-[400px]">
+                <h3 class="font-esamanru mt-2 text-2xl font-semibold uppercase text-third text-center">
+                  {name}
+                </h3>
+                <p class="font-esamanru font-normal capitalize text-dark text-center">
+                  {description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
