@@ -1,0 +1,76 @@
+---
+// import { Image } from "astro:assets";
+// import storeShape from "@/assets/images/store-bg.png";
+
+import Layout from "../layout/MainLayout.astro";
+const title = "Contact Page";
+const metaDesc = "Temukan gerai Eat Pizza terdekat dan nikmati pizza lezat favorit Anda! Dapatkan pengalaman makan yang menyenangkan bersama keluarga dan teman.";
+
+const addressStore = [
+  {
+    title: "Summarecon Jakarta",
+    address: "Summarecon Mall Kelapa Gading 3 followed by (Coming Soon)",
+    openingHour: "Operating Hours: 11am to 10pm (or till sold)",
+    linkBtn: "www.youtube.com"
+  },
+  {
+    title: "Summarecon Jakarta",
+    address: "Summarecon Mall Kelapa Gading 3 followed by (Coming Soon)",
+    openingHour: "Operating Hours: 11am to 10pm (or till sold)",
+    linkBtn: "www.youtube.com"
+  },
+  {
+    title: "Summarecon Jakarta",
+    address: "Summarecon Mall Kelapa Gading 3 followed by (Coming Soon)",
+    openingHour: "Operating Hours: 11am to 10pm (or till sold)",
+    linkBtn: "www.youtube.com"
+  },
+  {
+    title: "Summarecon Jakarta",
+    address: "Summarecon Mall Kelapa Gading 3 followed by (Coming Soon)",
+    openingHour: "Operating Hours: 11am to 10pm (or till sold)",
+    linkBtn: "www.youtube.com"
+  },
+  {
+    title: "Summarecon Jakarta",
+    address: "Summarecon Mall Kelapa Gading 3 followed by (Coming Soon)",
+    openingHour: "Operating Hours: 11am to 10pm (or till sold)",
+    linkBtn: "www.youtube.com"
+  },
+  {
+    title: "Summarecon Jakarta",
+    address: "Summarecon Mall Kelapa Gading 3 followed by (Coming Soon)",
+    openingHour: "Operating Hours: 11am to 10pm (or till sold)",
+    linkBtn: "www.youtube.com"
+  },
+];
+---
+
+<Layout title={title} metaDesc={metaDesc}>
+  <!-- Store Section bg-store-bg bg-no-repeat bg-cover bg-top -->
+  <section class="contact relative flex flex-col bg-store-bg bg-no-repeat bg-cover bg-top gap-5 justify-center items-center w-full pt-28 pb-8 px-5 tablet:gap-10 tablet:pt-32 tablet:pb-16 tablet:px-10 laptop:px-20 laptop:pt-36">
+    <!-- <Image class="absolute w-full inset-0 top-16 laptop:top-0" src={storeShape} alt="Shape Store" quality="max" /> -->
+    <div class="title flex gap-2 flex-col items-center z-10">
+      <h1 class="text-3xl text-stroke-1 font-esamanru font-bold text-stroke-dark text-shadow-sm text-white tablet:text-5xl laptop:text-6xl desktop:text-7xl">
+        Store
+      </h1>
+      <p class="text-sm text-center text-stroke-1 font-esamanru font-bold text-stroke-dark text-shadow-sm text-white tablet:px-40 tablet:text-lg desktop:text-2xl">Berikut adalah berbagai lokasi dari toko kami yang sudah beroprasi</p>
+    </div>
+    <div class="relative w-full pb-[100%] laptop:pb-[56.25%] desktop:pb-[40%]">
+      <iframe 
+        class="absolute top-0 left-0 w-full h-full rounded-xl"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.802046174725!2d106.90355538496574!3d-6.157261244423001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f54bbca6c649%3A0x1c1a278e20ff1c47!2sSummarecon%20Mall%20Kelapa%20Gading!5e0!3m2!1sid!2sid!4v1729662408655!5m2!1sid!2sid"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="box-card z-10 grid grid-cols-1 gap-4 tablet:grid-cols-2 w-full">
+      {addressStore.map(({ title, address, openingHour, linkBtn }) => (
+        <div class="card flex flex-col gap-2 items-center bg-third py-4 px-5 rounded-lg text-white">
+          <h4 class="text-center font-esamanru text-xl font-semibold">{title}</h4>
+          <p class="text-center font-esamanru font-light text-sm">{address}</p>
+          <p class="text-center font-esamanru font-light text-sm">{openingHour}</p>
+          <a class="text-white font-esamanru font-medium bg-dark py-2 px-4 rounded-sm hover:bg-white hover:text-dark duration-200" href={linkBtn}>Ambil Sendiri</a>
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>

@@ -67,6 +67,7 @@ export default {
         "menu-bg": "url('./src/assets/images/menu-bg.jpg')",
         "partner-bg": "url('./src/assets/images/partnership-bg.png')",
         "contact": "url('./src/assets/images/contact-img.jpg')",
+        "store-bg": "url('./src/assets/images/store-bg.png')",
       },
       gridTemplateColumns: {
         "custom-70-30": "70% 30%",
