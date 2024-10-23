@@ -34,3 +34,15 @@ export const CAROUSEL_MENU = [
     description: "Udang Marinasi, Daging Cincang, Saus Salsa",
   },
 ];
+
+export const DOMICILES = [
+  "Denpasar",
+  "Badung",
+  "Gianyar",
+  "Tabanan",
+  "Bangli",
+  "Buleleng",
+  "Jembrana",
+  "Karangasem",
+  "Klungkung",
+];
