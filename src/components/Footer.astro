@@ -19,8 +19,10 @@ const navLinks = [
 ---
 
 <footer class="bg-main text-white text-center flex flex-col">
-  <div class="footer-content p-5 flex flex-col justify-center gap-5 laptop:p-10">
-    <Image class="w-52 laptop:w-96" src={eatPizzaLogo} alt="Eat Pizza Logo" />
+  <div class="footer-content p-5 flex flex-col justify-center gap-5 tablet:p-10 laptop:px-20">
+    <a href="/">
+      <Image class="w-52 laptop:w-96" src={eatPizzaLogo} alt="Eat Pizza Logo" />
+    </a>
     <!-- Navigation Links -->
     <ul class="flex flex-col items-start laptop:flex-row laptop:gap-4 laptop:self-end laptop:order-1" id="menu">
       {

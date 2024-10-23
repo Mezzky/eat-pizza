@@ -19,7 +19,7 @@ export default {
       colors: {
         main: "#F8D55B",
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "#75B9C9",
           foreground: "hsl(var(--secondary-foreground))",
         },
         third: "#EF3340",

@@ -5,38 +5,32 @@ import shrimp from "@/assets/images/shrimp.png";
 export const CAROUSEL_MENU = [
   {
     img: hotSpicyChicken,
-    name: "hot spicy chicken",
+    name: "spicy chicken",
     description: "Ayam Pedas Korea, Jagung Manis, Saus Chipotle",
-    price: 8.9,
   },
   {
     img: sirloinSteak,
     name: "sirloin steak",
     description: "Daging Sirloin, Daging Cincang, Saus Steak",
-    price: 8.9,
   },
   {
     img: shrimp,
     name: "shrimp",
     description: "Udang Marinasi, Daging Cincang, Saus Salsa",
-    price: 8.9,
   },
   {
     img: hotSpicyChicken,
-    name: "hot spicy chicken",
+    name: "spicy chicken",
     description: "Ayam Pedas Korea, Jagung Manis, Saus Chipotle",
-    price: 8.9,
   },
   {
     img: sirloinSteak,
     name: "sirloin steak",
     description: "Daging Sirloin, Daging Cincang, Saus Steak",
-    price: 8.9,
   },
   {
     img: shrimp,
     name: "shrimp",
     description: "Udang Marinasi, Daging Cincang, Saus Salsa",
-    price: 8.9,
   },
 ];
