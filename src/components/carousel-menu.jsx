@@ -24,7 +24,9 @@ export function CarouselMenu() {
               <CardContent className="flex flex-col items-center justify-center space-y-4 p-6 text-center">
                 <img src={img.src} alt={name} className="w-[225px]" />
                 <div className="space-y-2">
-                  <h3 className="font-esamanru text-2xl font-semibold uppercase text-third">{name}</h3>
+                  <h3 className="font-esamanru text-2xl font-semibold uppercase text-third">
+                    {name}
+                  </h3>
                   <p className="font-esamanru font-normal capitalize text-dark">{description}</p>
                 </div>
               </CardContent>

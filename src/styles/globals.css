@@ -65,6 +65,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   @apply rounded-md bg-third duration-300 hover:bg-third/50;
 }
+
 @layer base {
   :root {
     --radius: 0.5rem;
@@ -119,11 +120,15 @@ body::-webkit-scrollbar-thumb {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
-@layer base {
+
   * {
     @apply border-border;
   }
+
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
   }

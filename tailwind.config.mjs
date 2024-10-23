@@ -66,7 +66,7 @@ export default {
         "home-bg": "url('./src/assets/images/section1-bg.png')",
         "wood-bg": "url('./src/assets/images/menu-bg.jpg')",
         "partner-bg": "url('./src/assets/images/partnership-bg.png')",
-        "contact": "url('./src/assets/images/contact-img.jpg')",
+        contact: "url('./src/assets/images/contact-img.jpg')",
         "store-bg": "url('./src/assets/images/store-bg.png')",
         "menu-title": "url('./src/assets/images/menu-title.png')",
         "menu-bg": "url('./src/assets/images/menu-bg.png')",
