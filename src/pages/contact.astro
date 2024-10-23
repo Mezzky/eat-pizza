@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import ContactForm from "@/components/ContactForm.astro";
+import contactShape from "@/assets/images/contact-shape.svg";
+
+import Layout from "../layout/MainLayout.astro";
+const title = "Contact Page";
+const metaDesc = "Ada pertanyaan atau ingin bekerja sama dengan kami? Hubungi kami sekarang! Tim kami siap membantu Anda.";
+---
+
+<Layout title={title} metaDesc={metaDesc}>
+  <!-- Contact Section -->
+  <section class="contact relative flex flex-col gap-10 justify-center items-center w-full pt-28 pb-8 px-5 bg-[#BF212A] tablet:pt-32 tablet:pb-16 tablet:px-10 laptop:px-20 laptop:pt-36">
+    <Image class="absolute w-full inset-0 top-16 laptop:top-0" src={contactShape} alt="Shape Contact" quality="max" />
+    <h1 class="text-2xl z-10 text-dark font-esamanru font-semibold tablet:text-3xl laptop:text-6xl desktop:text-8xl">
+      Contact Us
+    </h1>
+    <div class="contact-box grid laptop:grid-cols-custom-70-30 self-center z-10">
+      <ContactForm />
+      <div class="bg-contact bg-no-repeat bg-cover bg-center laptop:rounded-tr-lg laptop:rounded-br-lg"></div>
+    </div>
+  </section>
+</Layout>
