@@ -75,21 +75,24 @@ const addressStore = [
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="box-card z-10 grid grid-cols-1 gap-4 tablet:grid-cols-2 w-full">
-      {
-        addressStore.map(({ title, address, openingHour, linkBtn }) => (
-          <div class="card flex flex-col gap-2 items-center bg-third py-4 px-5 rounded-lg text-white">
-            <h4 class="text-center font-esamanru text-xl font-semibold">{title}</h4>
-            <p class="text-center font-esamanru font-light text-sm">{address}</p>
-            <p class="text-center font-esamanru font-light text-sm">{openingHour}</p>
-            <a
-              class="text-white font-esamanru font-medium bg-dark py-2 px-4 rounded-sm hover:bg-white hover:text-dark duration-200"
-              href={linkBtn}
-            >
-              Ambil Sendiri
-            </a>
-          </div>
-        ))
-      }
+      {addressStore.map(({ title, address, openingHour, linkBtn }) => (
+        <div data-aos="zoom-in" class="card flex flex-col gap-2 items-center bg-third py-4 px-5 rounded-lg text-white">
+          <h4 class="text-center font-esamanru text-xl font-semibold">{title}</h4>
+          <p class="text-center font-esamanru font-light text-sm">{address}</p>
+          <p class="text-center font-esamanru font-light text-sm">{openingHour}</p>
+          <a class="text-white font-esamanru font-medium bg-dark py-2 px-4 rounded-sm hover:bg-white hover:text-dark duration-200" href={linkBtn}>Ambil Sendiri</a>
+        </div>
+      ))}
     </div>
   </section>
+
+  <script>
+    import AOS from 'aos';
+    import 'aos/dist/aos.css';
+  
+    AOS.init({
+      duration: 500,
+      easing: 'ease-in-out',
+    });
+  </script>
 </Layout>

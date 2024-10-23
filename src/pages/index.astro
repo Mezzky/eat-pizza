@@ -22,7 +22,7 @@ import readyGif from "@/assets/images/ready.gif";
 import cookGif from "@/assets/images/cook.gif";
 import freshGif from "@/assets/images/fresh.gif";
 import intersect from "@/assets/images/intersect.png";
-import contactImg from "@/assets/images/contact-img.png";
+import close from "@/assets/images/close.svg";
 
 import Layout from "../layout/MainLayout.astro";
 import { ContactForm } from "@/components/contact-form";
@@ -35,19 +35,37 @@ import { CarouselMenu } from "@/components/carousel-menu";
 ---
 
 <Layout title={title} metaDesc={metaDesc}>
+  <!-- Flyout Bubble -->
+  <div id="flyoutBubble" data-aos="zoom-in" class="flex w-24 z-30 p-5 fixed right-5 bottom-10 border-2 border-white rounded-lg flex-col gap-1 justify-center items-center bg-bubble-bg bg-cover bg-center bg-no-repeat">
+    <div class="bg-red-800/60 absolute w-full h-full rounded-lg"></div>
+    <button id="closeButton" class="absolute z-10 top-0 right-0 text-white text-lg focus:outline-none">
+      <Image src={close} alt="close"/>
+    </button>
+    <p class="z-10 text-[12px] font-esamanru text-white text-center">Gabung Bersama Kami!</p>
+    <a class="z-10 text-[12px] self-stretch text-center rounded-sm bg-third px-2 py-1 font-medium text-white hover:bg-opacity-80 disabled:cursor-not-allowed disabled:opacity-50 desktop:text-xl" href="/partner">Klik!</a>
+  </div>
+
   <!-- Home Section -->
   <section class="title flex flex-col items-center pt-24 px-5 relative tablet:px-10 desktop:px-40">
     <Image
+      data-aos="fade-right"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="500"
       class="absolute bottom-0 left-0 w-20 tablet:w-28 laptop:w-32 desktop:w-52"
       src={leftBg}
       alt="Left background"
     />
     <Image
+      data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="500"
       class="absolute bottom-0 right-0 w-20 tablet:w-28 laptop:w-32 desktop:w-52"
       src={rightBg}
       alt="Right background"
     />
-    <div class="title flex flex-col gap-1 items-center z-10 desktop:gap-4">
+    <div data-aos="zoom-in" data-aos-delay="500" class="title flex flex-col gap-1 items-center z-10 desktop:gap-4">
       <div class="bg-white rounded-md">
         <h1
           class="text-xl text-third px-4 py-2 rounded-md font-esamanru text-shadow-sm text-stroke-1 text-stroke-dark font-semibold tablet:text-3xl laptop:text-4xl laptop:text-shadow-md laptop:text-stroke-2 laptop:px-8 laptop:py-4 desktop:text-5xl"
@@ -66,7 +84,7 @@ import { CarouselMenu } from "@/components/carousel-menu";
         Teman Asik di Mana Saja!
       </h2>
     </div>
-    <Image class="z-10" src={homeImg} alt="Home" quality="max" />
+    <Image data-aos="fade-up" data-aos-delay="500" src={homeImg} alt="Home" quality="max" />
   </section>
 
   <!-- Banner Section -->
@@ -99,7 +117,7 @@ import { CarouselMenu } from "@/components/carousel-menu";
   </div>
 
   <!-- Video Section -->
-  <section id="videoSection" class="video flex justify-center items-center relative">
+  <section data-aos="fade-in" id="videoSection" class="video flex justify-center items-center relative">
     <video id="eatpizzaVideo" class="w-full cursor-pointer" src="/video/eatpizza-video.mp4" loop
     ></video>
 
@@ -363,8 +381,18 @@ import { CarouselMenu } from "@/components/carousel-menu";
     </div>
   </section>
 
-  <!-- Video Play -->
   <script>
+    import AOS from 'aos';
+    import 'aos/dist/aos.css';
+  
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+    });
+  </script>
+
+<!-- Video Play -->
+<script>
     const video = document.getElementById("eatpizzaVideo") as HTMLVideoElement;
     const toggleButton = document.getElementById("toggleButton");
     const playIcon = document.getElementById("playIcon");
@@ -410,5 +438,9 @@ import { CarouselMenu } from "@/components/carousel-menu";
     // Add click event listener to toggle play/pause
     toggleButton.addEventListener("click", togglePlayPause);
     video.addEventListener("click", togglePlayPause);
+
+    document.getElementById('closeButton').addEventListener('click', function() {
+      document.getElementById('flyoutBubble').style.display = 'none';
+    });
   </script>
 </Layout>

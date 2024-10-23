@@ -70,6 +70,7 @@ export default {
         "store-bg": "url('./src/assets/images/store-bg.png')",
         "menu-title": "url('./src/assets/images/menu-title.png')",
         "menu-bg": "url('./src/assets/images/menu-bg.png')",
+        "bubble-bg": "url('./src/assets/images/bubble-img.png')",
       },
       gridTemplateColumns: {
         "custom-70-30": "70% 30%",
