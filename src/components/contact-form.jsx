@@ -1,3 +1,4 @@
+import { DOMICILES } from "@/constants";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
@@ -12,8 +13,6 @@ export const ContactForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-
-  const domiciles = ["Denpasar", "Gianyar", "Badung", "Singaraja"];
 
   async function handleChange(e) {
     const { name, value } = e.target;
@@ -150,7 +149,7 @@ export const ContactForm = () => {
             onChange={handleChange}
             className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
           >
-            {domiciles.map((dom) => (
+            {DOMICILES.map((dom) => (
               <option key={dom} value={dom}>
                 {dom}
               </option>
