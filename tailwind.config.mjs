@@ -16,6 +16,7 @@ export default {
         esamanru: "Esamanru",
         gmarket: "Gmarket Sans",
       },
+      scrollBehavior: ['smooth'],
       colors: {
         main: "#F8D55B",
         secondary: {
