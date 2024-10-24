@@ -140,13 +140,13 @@ import { CarouselMenu } from "@/components/carousel-menu";
   >
     <video id="eatpizzaVideo" class="w-full cursor-pointer" src="/video/eatpizza-video.mp4" loop controls></video>
 
-    <button
+    <!-- <button
       id="toggleButton"
       class="absolute flex justify-center items-center h-10 w-10 text-white opacity-0 transition-opacity duration-300 ease-in-out tablet:w-16 tablet:h-16 laptop:w-24 laptop:h-24"
     >
       <PlayIcon id="playIcon" className="text-white hidden" />
       <PauseIcon id="pauseIcon" className="text-white hidden" />
-    </button>
+    </button> -->
   </section>
 
   <!-- Menu Section -->
@@ -410,54 +410,54 @@ import { CarouselMenu } from "@/components/carousel-menu";
       once: true,
     });
 
-    const video = document.getElementById("eatpizzaVideo") as HTMLVideoElement;
-    const toggleButton = document.getElementById("toggleButton");
-    const playIcon = document.getElementById("playIcon");
-    const pauseIcon = document.getElementById("pauseIcon");
+    // const video = document.getElementById("eatpizzaVideo") as HTMLVideoElement;
+    // const toggleButton = document.getElementById("toggleButton");
+    // const playIcon = document.getElementById("playIcon");
+    // const pauseIcon = document.getElementById("pauseIcon");
 
     // Initially show the play icon
-    playIcon.classList.remove("hidden");
-    pauseIcon.classList.add("hidden");
+    // playIcon.classList.remove("hidden");
+    // pauseIcon.classList.add("hidden");
 
     // Function to toggle play/pause
-    const togglePlayPause = () => {
-      if (video.paused) {
-        video.play();
-        playIcon.classList.add("hidden"); // Hide Play icon
-        pauseIcon.classList.remove("hidden"); // Show Pause icon
-      } else {
-        video.pause();
-        playIcon.classList.remove("hidden"); // Show Play icon
-        pauseIcon.classList.add("hidden"); // Hide Pause icon
-      }
-    };
+    // const togglePlayPause = () => {
+    //   if (video.paused) {
+    //     video.play();
+    //     playIcon.classList.add("hidden"); 
+    //     pauseIcon.classList.remove("hidden"); 
+    //   } else {
+    //     video.pause();
+    //     playIcon.classList.remove("hidden"); 
+    //     pauseIcon.classList.add("hidden"); 
+    //   }
+    // };
 
     // Event listeners for showing and hiding the icons on hover
-    const videoSection = document.getElementById("videoSection");
+    // const videoSection = document.getElementById("videoSection");
 
     // Show the play/pause button on hover
-    videoSection.addEventListener("mouseenter", () => {
-      toggleButton.classList.remove("opacity-0");
-      if (video.paused) {
-        playIcon.classList.remove("hidden"); // Show play icon when video is paused
-      } else {
-        pauseIcon.classList.remove("hidden"); // Show pause icon when video is playing
-      }
-    });
+    // videoSection.addEventListener("mouseenter", () => {
+    //   toggleButton.classList.remove("opacity-0");
+    //   if (video.paused) {
+    //     playIcon.classList.remove("hidden"); 
+    //   } else {
+    //     pauseIcon.classList.remove("hidden"); 
+    //   }
+    // });
 
     // Hide the play/pause button on unhover
-    videoSection.addEventListener("mouseleave", () => {
-      toggleButton.classList.add("opacity-0"); // Hide the button
-      playIcon.classList.add("hidden"); // Hide play icon
-      pauseIcon.classList.add("hidden"); // Hide pause icon
-    });
+    // videoSection.addEventListener("mouseleave", () => {
+    //   toggleButton.classList.add("opacity-0"); 
+    //   playIcon.classList.add("hidden"); 
+    //   pauseIcon.classList.add("hidden"); 
+    // });
 
     // Add click event listener to toggle play/pause
-    toggleButton.addEventListener("click", togglePlayPause);
-    video.addEventListener("click", togglePlayPause);
+    // toggleButton.addEventListener("click", togglePlayPause);
+    // video.addEventListener("click", togglePlayPause);
 
-    document.getElementById("closeButton").addEventListener("click", function () {
-      document.getElementById("flyoutBubble").style.display = "none";
-    });
+    // document.getElementById("closeButton").addEventListener("click", function () {
+    //   document.getElementById("flyoutBubble").style.display = "none";
+    // });
   </script>
 </Layout>
