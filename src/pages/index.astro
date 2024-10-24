@@ -26,12 +26,12 @@ import close from "@/assets/images/close.svg";
 
 import Layout from "../layout/MainLayout.astro";
 import { ContactForm } from "@/components/contact-form";
+import { CarouselMenu } from "@/components/carousel-menu";
 
 const title = "Home Page";
 const metaDesc =
   "Eat Pizza, franchise pizza nomor satu dari Korea, kini hadir di Indonesia! Sajikan pizza persegi panjang inovatif dan menangkan hati pelanggan. Peluang bisnis kuliner menjanjikan menanti Anda.";
-import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
-import { CarouselMenu } from "@/components/carousel-menu";
+  // import { PlayIcon, PauseIcon } from "@heroicons/react/24/solid";
 ---
 
 <Layout title={title} metaDesc={metaDesc}>
@@ -338,7 +338,7 @@ import { CarouselMenu } from "@/components/carousel-menu";
             10 <span class="text-xl font-semibold desktop:text-5xl desktop:font-medium">menit</span>
           </h3>
           <p class="text-center font-gmarket desktop:text-2xl">
-            Semua orang bisa! Dalam 10 menit! Langsung Paham.
+            Semua orang bisa! Dalam 10 menit, Langsung Paham!
           </p>
         </div>
       </div>
@@ -456,8 +456,8 @@ import { CarouselMenu } from "@/components/carousel-menu";
     // toggleButton.addEventListener("click", togglePlayPause);
     // video.addEventListener("click", togglePlayPause);
 
-    // document.getElementById("closeButton").addEventListener("click", function () {
-    //   document.getElementById("flyoutBubble").style.display = "none";
-    // });
+    document.getElementById("closeButton").addEventListener("click", function () {
+      document.getElementById("flyoutBubble").style.display = "none";
+    });
   </script>
 </Layout>
