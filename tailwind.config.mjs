@@ -16,7 +16,7 @@ export default {
         esamanru: "Esamanru",
         gmarket: "Gmarket Sans",
       },
-      scrollBehavior: ['smooth'],
+      scrollBehavior: ["smooth"],
       colors: {
         main: "#F8D55B",
         secondary: {
@@ -64,14 +64,14 @@ export default {
         },
       },
       backgroundImage: {
-        "home-bg": "url('./src/assets/images/section1-bg.png')",
-        "wood-bg": "url('./src/assets/images/menu-bg.jpg')",
-        "partner-bg": "url('./src/assets/images/partnership-bg.png')",
-        contact: "url('./src/assets/images/contact-img.jpg')",
-        "store-bg": "url('./src/assets/images/store-bg.png')",
-        "menu-title": "url('./src/assets/images/menu-title.png')",
-        "menu-bg": "url('./src/assets/images/menu-bg.png')",
-        "bubble-bg": "url('./src/assets/images/bubble-img.png')",
+        "home-bg": "url('/src/assets/images/section1-bg.png')", // start with forward slash
+        "wood-bg": "url('/src/assets/images/menu-bg.jpg')",
+        "partner-bg": "url('/src/assets/images/partnership-bg.png')",
+        contact: "url('/src/assets/images/contact-img.jpg')",
+        "store-bg": "url('/src/assets/images/store-bg.png')",
+        "menu-title": "url('/src/assets/images/menu-title.png')",
+        "menu-bg": "url('/src/assets/images/menu-bg.png')",
+        "bubble-bg": "url('/src/assets/images/bubble-img.png')",
       },
       gridTemplateColumns: {
         "custom-70-30": "70% 30%",
