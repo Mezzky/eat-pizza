@@ -10,4 +10,5 @@ export default defineConfig({
     }),
     react(),
   ],
+  site: "https://Mezzky.github.io",
 });
