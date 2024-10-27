@@ -80,7 +80,7 @@ export const CITIES = [
   "Klungkung",
 ];
 
-export const BUSINESS_TYPES = ["Single Unit", "Multiple Units"];
+export const BUSINESS_TYPES = ["Satu Unit", "Beberapa Unit"];
 
 export const CAPITALS = [
   "US$50,000 - US$99,999",
@@ -89,4 +89,4 @@ export const CAPITALS = [
   "US$300,000 or More",
 ];
 
-export const START_DATES = ["Immediate", "3 - 6 Months", "> 6 Months"];
+export const START_DATES = ["Segera", "3 - 6 Bulan", "> 6 Bulan"];
