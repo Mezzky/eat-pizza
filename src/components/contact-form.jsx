@@ -212,7 +212,7 @@ export const ContactForm = () => {
             htmlFor="intended city"
             className="font-esamanru text-sm text-black desktop:text-lg"
           >
-            Intended City
+            Kota
           </label>
           <select
             id="intended city"
