@@ -10,6 +10,7 @@ import freshGif from "@/assets/images/fresh.gif";
 import intersect from "@/assets/images/intersect.png";
 
 import { ContactForm } from "@/components/contact-form";
+import BenefitBox from "@/components/Benefit-box.astro";
 
 import Layout from "../layout/MainLayout.astro";
 const title = "Partnership Page";
@@ -69,8 +70,7 @@ const boxStyle = {
           <h3 class="text-5xl font-bold font-esamanru self-start tablet:hidden">01</h3>
           <h4 class="font-semibold font-esamanru">Keuntungan Maksimal</h4>
           <p class="font-esamanru text-sm">
-            Sistem yang fleksibel mengurangi biaya sewa, tenaga kerja, dan operasional, menghasilkan
-            profit yang luar biasa.
+            Sistem yang fleksibel mengurangi biaya sewa, tenaga kerja, dan operasional untuk menghasilkan profit yang luar biasa.
           </p>
         </div>
         <h3 class="text-5xl font-bold font-esamanru hidden tablet:block">01</h3>
@@ -80,8 +80,7 @@ const boxStyle = {
           <h3 class="text-5xl font-bold font-esamanru self-start tablet:hidden">02</h3>
           <h4 class="font-semibold font-esamanru">Super Efisien</h4>
           <p class="font-esamanru text-sm">
-            Toko yang bisa dijalankan satu orang dengan sistem yang gampang dipelajari. Ada juga
-            sistem pemesanan otomatis!
+            Toko yang bisa dijalankan minimal satu orang dengan sistem yang mudah dipelajari.
           </p>
         </div>
         <h3 class="text-5xl font-bold font-esamanru hidden tablet:block">02</h3>
@@ -91,8 +90,7 @@ const boxStyle = {
           <h3 class="text-5xl font-bold font-esamanru self-start tablet:hidden">03</h3>
           <h4 class="font-semibold font-esamanru">Dapur Tanpa Ribet</h4>
           <p class="font-esamanru text-sm">
-            Bikin pizza cuma dalam 20 detik dengan 3 langkah simpel: tambahin saus, keju, dan
-            topping di atas adonan.
+            Bikin Pizza cuma dalam 20 detik dengan 3 langkah simpel: tambahin saus, keju, dan topping di atas adonan.
           </p>
         </div>
         <h3 class="text-5xl font-bold font-esamanru hidden tablet:block">03</h3>
@@ -102,8 +100,7 @@ const boxStyle = {
           <h3 class="text-5xl font-bold font-esamanru self-start tablet:hidden">04</h3>
           <h4 class="font-semibold font-esamanru">Operasional Super Simpel</h4>
           <p class="font-esamanru text-sm">
-            Mayoritas produk sudah siap dari dapur pusat, jadi operasional di toko lebih cepat dan
-            efisien.
+            Mayoritas produk sudah siap dari dapur pusat, jadi operasional di toko lebih cepat dan efisien.
           </p>
         </div>
         <h3 class="text-5xl font-bold font-esamanru hidden tablet:block">04</h3>
@@ -113,8 +110,7 @@ const boxStyle = {
           <h3 class="text-5xl font-bold font-esamanru self-start tablet:hidden">05</h3>
           <h4 class="font-semibold font-esamanru">Proses Cepat</h4>
           <p class="font-esamanru text-sm">
-            Pizza bisa disajikan dalam 5 menit setelah masuk oven, jadi lebih cepat dan nggak bikin
-            antrean panjang.
+            Pizza bisa disajikan dalam 5 menit setelah masuk oven, jadi lebih cepat dan tidak bikin antrian panjang.
           </p>
         </div>
         <h3 class="text-5xl font-bold font-esamanru hidden tablet:block">05</h3>
@@ -124,8 +120,7 @@ const boxStyle = {
           <h3 class="text-5xl font-bold font-esamanru self-start tablet:hidden">06</h3>
           <h4 class="font-semibold font-esamanru">Jualan Dengan 6 Cara</h4>
           <p class="font-esamanru text-sm">
-            Maksimalkan penjualan lewat banyak konsep: makan di tempat, kios, delivery, makan siang,
-            makan malam, sampai camilan!
+            Maksimalkan penjualan lewat banyak konsep: makan di tempat, kios, delivery, makan siang, makan malam, sampai camilan!
           </p>
         </div>
         <h3 class="text-5xl font-bold font-esamanru hidden tablet:block">06</h3>
@@ -134,72 +129,7 @@ const boxStyle = {
   </section>
 
   <!-- Benefit Box -->
-  <div
-    class="benefit-box py-8 px-5 relative grid grid-cols-1 gap-10 tablet:grid-cols-2 tablet:gap-5 tablet:p-10 laptop:p-20 desktop:gap-10"
-  >
-    <Image class="w-full inset-0 top-40 absolute tablet:hidden" src={pizzaBg} alt="Pizza" />
-    <Image
-      class="w-full inset-0 top-12 absolute hidden tablet:block"
-      src={pizzaBgLarge}
-      alt="Pizza large"
-    />
-    <div class="card relative z-10 flex flex-col">
-      <Image class="rounded-t-lg w-full desktop:rounded-t-2xl" src={learnGif} alt="Learn" />
-      <div
-        class="rounded-b-lg py-5 px-10 text flex flex-col gap-2 justify-center items-center bg-white text-slate-950 desktop:rounded-b-2xl desktop:px-40 desktop:py-10 desktop:gap-8"
-      >
-        <h4 class="font-esamanru text-xl desktop:text-4xl">Belajar Cuma</h4>
-        <h3 class="font-esamanru font-bold text-6xl flex items-end gap-2 desktop:text-9xl">
-          10 <span class="text-xl font-semibold desktop:text-5xl desktop:font-medium">menit</span>
-        </h3>
-        <p class="text-center font-gmarket desktop:text-2xl">
-          Semua orang bisa! Dalam 10 menit, Langsung Paham!
-        </p>
-      </div>
-    </div>
-    <div class="card relative z-10 flex flex-col">
-      <Image class="rounded-t-lg w-full desktop:rounded-t-2xl" src={readyGif} alt="Ready" />
-      <div
-        class="rounded-b-lg py-5 px-10 text flex flex-col gap-2 justify-center items-center bg-white text-slate-950 desktop:rounded-b-2xl desktop:px-40 desktop:py-10 desktop:gap-8"
-      >
-        <h4 class="font-esamanru text-xl desktop:text-4xl">Siap dalam</h4>
-        <h3 class="font-esamanru font-bold text-6xl flex items-end gap-2 desktop:text-9xl">
-          20 <span class="text-xl font-semibold desktop:text-5xl desktop:font-medium">detik</span>
-        </h3>
-        <p class="text-center font-gmarket desktop:text-2xl">
-          Tinggal susun semua bahan, nggak perlu lama!
-        </p>
-      </div>
-    </div>
-    <div class="card relative z-10 flex flex-col">
-      <Image class="rounded-t-lg w-full desktop:rounded-t-2xl" src={cookGif} alt="Cook" />
-      <div
-        class="rounded-b-lg py-5 px-10 text flex flex-col gap-2 justify-center items-center bg-white text-slate-950 desktop:rounded-b-2xl desktop:px-40 desktop:py-10 desktop:gap-8"
-      >
-        <h4 class="font-esamanru text-xl desktop:text-4xl">Pizza jadi dalam</h4>
-        <h3 class="font-esamanru font-bold text-6xl flex items-end gap-2 desktop:text-9xl">
-          5 <span class="text-xl font-semibold desktop:text-5xl desktop:font-medium">menit</span>
-        </h3>
-        <p class="text-center font-gmarket desktop:text-2xl">
-          Masuk oven, tunggu 5 menit, pizza siap dimakan!
-        </p>
-      </div>
-    </div>
-    <div class="card relative z-10 flex flex-col">
-      <Image class="rounded-t-lg w-full desktop:rounded-t-2xl" src={freshGif} alt="Fresh" />
-      <div
-        class="rounded-b-lg py-5 px-10 text flex flex-col gap-2 justify-center items-center bg-white text-slate-950 desktop:rounded-b-2xl desktop:px-40 desktop:py-10 desktop:gap-8"
-      >
-        <h4 class="font-esamanru text-xl desktop:text-4xl">Fresh tiap</h4>
-        <h3 class="font-esamanru font-bold text-6xl flex items-end gap-2 desktop:text-9xl">
-          30 <span class="text-xl font-semibold desktop:text-5xl desktop:font-medium">detik</span>
-        </h3>
-        <p class="text-center font-gmarket desktop:text-2xl">
-          Pizza selalu fresh, keluar dari oven setiap 30 detik!
-        </p>
-      </div>
-    </div>
-  </div>
+  <BenefitBox/>
 
   <!-- Procedure Section -->
   <section
@@ -213,8 +143,7 @@ const boxStyle = {
     <p
       class="text-sm text-center text-stroke-1 font-esamanru font-bold text-stroke-dark text-shadow-sm text-white tablet:text-lg laptop:text-3xl laptop:text-stroke-2 laptop:text-shadow-xl"
     >
-      Ahli distrik komersial kami dengan pengalaman lebih dari 15 tahun akan menemukan lokasi
-      terbaik untuk Anda
+      Ahli distrik komersial kami dengan pengalaman lebih dari 15 tahun akan menemukan lokasi terbaik untuk Anda
     </p>
     <div
       class="procedure-box grid grid-cols-1 gap-2 tablet:grid-cols-2 tablet:gap-4 laptop:grid-cols-4"
@@ -248,7 +177,7 @@ const boxStyle = {
             fill="white"></path>
         </svg>
         <p class="text-sm font-esamanru text-center">
-          ANALISIS DISTRIK IKLAN DAN PENGEMBANGAN TOKO
+          SURVEY LOKASI DAN PENGEMBANGAN TOKO
         </p>
       </div>
       <div data-aos="zoom-in" class={boxStyle.light}>
@@ -309,7 +238,7 @@ const boxStyle = {
             d="M22.1238 29.9301L22.1149 29.9373L22.1065 29.9456L22.1238 29.9301ZM61.5255 29.1918C61.2501 28.9263 60.9446 28.6941 60.6151 28.4998C60.1488 28.2253 59.6311 28.0494 59.0941 27.983C58.557 27.9166 58.0121 27.961 57.4929 28.1135C56.9737 28.266 56.4913 28.5234 56.0756 28.8698C55.6599 29.2162 55.3196 29.6441 55.0758 30.1272C53.7123 32.8137 51.8317 35.2045 49.542 37.1625C49.8922 35.1897 50.0687 33.19 50.0697 31.1864C50.077 25.0909 48.469 19.1024 45.4094 13.8305C42.3497 8.55861 37.9477 4.19166 32.6515 1.17427C32.068 0.84354 31.4102 0.666454 30.7395 0.659629C30.0689 0.652803 29.4076 0.816462 28.8175 1.13525C28.2275 1.45403 27.7281 1.9175 27.3663 2.48215C27.0044 3.0468 26.7919 3.69412 26.7488 4.36338C26.5273 8.11657 25.5461 11.7857 23.8647 15.1485C22.1833 18.5113 19.8367 21.4978 16.9671 23.9269L16.0548 24.6691C13.054 26.6882 10.3979 29.1772 8.18838 32.0407C4.75379 36.3676 2.37456 41.4352 1.23935 46.8416C0.104146 52.248 0.244199 57.8446 1.6484 63.1875C3.0526 68.5304 5.68233 73.4726 9.32904 77.6223C12.9757 81.772 17.5391 85.0149 22.6573 87.094C23.2583 87.3396 23.9104 87.4335 24.5562 87.3674C25.202 87.3014 25.8217 87.0774 26.3605 86.7153C26.8993 86.3532 27.3407 85.864 27.6457 85.291C27.9508 84.7179 28.1102 84.0786 28.1098 83.4295C28.1069 83.0096 28.0405 82.5925 27.9126 82.1925C27.027 78.8636 26.772 75.3984 27.1607 71.9758C30.9063 79.0403 36.9186 84.6401 44.2311 87.8748C45.1236 88.2741 46.1327 88.3279 47.0626 88.0256C52.84 86.1609 58.0447 82.8498 62.1821 78.4071C66.3194 73.9643 69.252 68.5374 70.7013 62.642C72.1505 56.7466 72.0683 50.5786 70.4623 44.7239C68.8563 38.8693 65.7799 33.5226 61.5255 29.1918ZM46.0691 79.9814C42.6187 78.2327 39.5749 75.7774 37.1357 72.7751C34.6965 69.7728 32.9165 66.2908 31.9115 62.5554C31.6045 61.2977 31.3671 60.024 31.2002 58.7401C31.0871 57.9225 30.7214 57.1607 30.1541 56.5612C29.5868 55.9617 28.8464 55.5544 28.0363 55.3964C27.7867 55.3472 27.5329 55.3226 27.2785 55.323C26.5828 55.3227 25.8993 55.5059 25.297 55.8541C24.6947 56.2023 24.1948 56.7031 23.8478 57.3061C20.5635 62.9709 18.9118 69.4346 19.0758 75.9806C16.1871 73.7347 13.773 70.9378 11.9732 67.752C10.1735 64.5662 9.02395 61.0549 8.59122 57.4215C8.15849 53.7882 8.45119 50.1051 9.45236 46.5857C10.4535 43.0663 12.1432 39.7807 14.4236 36.9191C16.155 34.6701 18.2437 32.7205 20.6065 31.1479C20.7088 31.0819 20.8069 31.0096 20.9003 30.9314C20.9003 30.9314 22.0747 29.9597 22.1148 29.9375C27.7542 25.1675 31.7653 18.7572 33.589 11.5997C37.9019 15.5867 40.7777 20.8861 41.7699 26.6751C42.7621 32.4641 41.8152 38.4187 39.0762 43.6143C38.7143 44.3076 38.5658 45.0925 38.6495 45.8701C38.7333 46.6477 39.0454 47.383 39.5465 47.9834C40.0477 48.5838 40.7154 49.0224 41.4655 49.2437C42.2155 49.4651 43.0144 49.4593 43.7612 49.2272C49.8245 47.3266 55.16 43.614 59.0495 38.5892C61.3871 42.042 62.9154 45.9779 63.5205 50.1034C64.1255 54.229 63.7918 58.4379 62.5441 62.4166C61.2964 66.3952 59.1669 70.041 56.3143 73.0823C53.4618 76.1235 49.9597 78.4818 46.069 79.9815L46.0691 79.9814Z"
             fill="#5C3217"></path>
         </svg>
-        <p class="text-sm font-esamanru text-center">PELATIHAN MEMASAK DAN OPERASI</p>
+        <p class="text-sm font-esamanru text-center">PELATIHAN MEMASAK DAN OPERASIONAL</p>
       </div>
       <div data-aos="zoom-in" class={boxStyle.dark}>
         <h4 class="text-3xl font-esamanru font-bold">Step 07</h4>
@@ -324,7 +253,7 @@ const boxStyle = {
             d="M83.75 16.3856H4.58333C3.53352 16.3856 2.5267 16.8026 1.78437 17.545C1.04204 18.2873 0.625 19.2941 0.625 20.3439V36.1772C0.631886 38.6272 1.39639 41.0151 2.81371 43.0135C4.23103 45.012 6.23178 46.5231 8.54167 47.3397V83.6772C8.54167 84.7271 8.9587 85.7339 9.70104 86.4762C10.4434 87.2186 11.4502 87.6356 12.5 87.6356H75.8333C76.8831 87.6356 77.89 87.2186 78.6323 86.4762C79.3746 85.7339 79.7917 84.7271 79.7917 83.6772V47.3397C82.1016 46.5231 84.1023 45.012 85.5196 43.0135C86.9369 41.0151 87.7015 38.6272 87.7083 36.1772V20.3439C87.7083 19.2941 87.2913 18.2873 86.549 17.545C85.8066 16.8026 84.7998 16.3856 83.75 16.3856ZM56.0417 24.3022H63.9583V36.1772C63.9583 37.2271 63.5413 38.2339 62.799 38.9762C62.0566 39.7185 61.0498 40.1356 60 40.1356C58.9502 40.1356 57.9434 39.7185 57.201 38.9762C56.4587 38.2339 56.0417 37.2271 56.0417 36.1772V24.3022ZM40.2083 24.3022H48.125V36.1772C48.125 37.2271 47.708 38.2339 46.9656 38.9762C46.2233 39.7185 45.2165 40.1356 44.1667 40.1356C43.1169 40.1356 42.11 39.7185 41.3677 38.9762C40.6254 38.2339 40.2083 37.2271 40.2083 36.1772V24.3022ZM24.375 24.3022H32.2917V36.1772C32.2917 37.2271 31.8746 38.2339 31.1323 38.9762C30.39 39.7185 29.3832 40.1356 28.3333 40.1356C27.2835 40.1356 26.2767 39.7185 25.5344 38.9762C24.792 38.2339 24.375 37.2271 24.375 36.1772V24.3022ZM12.5 40.1356C11.4502 40.1356 10.4434 39.7185 9.70104 38.9762C8.9587 38.2339 8.54167 37.2271 8.54167 36.1772V24.3022H16.4583V36.1772C16.4583 37.2271 16.0413 38.2339 15.299 38.9762C14.5566 39.7185 13.5498 40.1356 12.5 40.1356ZM52.0833 79.7189H36.25V71.8022C36.25 69.7026 37.0841 67.689 38.5687 66.2043C40.0534 64.7197 42.067 63.8856 44.1667 63.8856C46.2663 63.8856 48.2799 64.7197 49.7646 66.2043C51.2493 67.689 52.0833 69.7026 52.0833 71.8022V79.7189ZM71.875 79.7189H60V71.8022C60 67.603 58.3319 63.5757 55.3625 60.6064C52.3932 57.6371 48.3659 55.9689 44.1667 55.9689C39.9674 55.9689 35.9401 57.6371 32.9708 60.6064C30.0015 63.5757 28.3333 67.603 28.3333 71.8022V79.7189H16.4583V47.3397C17.9133 46.7997 19.2554 45.9944 20.4167 44.9647C22.5938 46.9121 25.4124 47.9886 28.3333 47.9886C31.2543 47.9886 34.0728 46.9121 36.25 44.9647C38.4272 46.9121 41.2457 47.9886 44.1667 47.9886C47.0877 47.9886 49.9062 46.9121 52.0833 44.9647C54.2605 46.9121 57.079 47.9886 60 47.9886C62.921 47.9886 65.7395 46.9121 67.9167 44.9647C69.0779 45.9944 70.42 46.7997 71.875 47.3397V79.7189ZM79.7917 36.1772C79.7917 37.2271 79.3746 38.2339 78.6323 38.9762C77.89 39.7185 76.8831 40.1356 75.8333 40.1356C74.7835 40.1356 73.7767 39.7185 73.0344 38.9762C72.292 38.2339 71.875 37.2271 71.875 36.1772V24.3022H79.7917V36.1772ZM13.6875 8.46891H75.8333C76.8831 8.46891 77.89 8.05188 78.6323 7.30954C79.3746 6.56721 79.7917 5.56039 79.7917 4.51058C79.7917 3.46076 79.3746 2.45395 78.6323 1.71161C77.89 0.969283 76.8831 0.552246 75.8333 0.552246H13.6875C12.6377 0.552246 11.6309 0.969283 10.8885 1.71161C10.1462 2.45395 9.72917 3.46076 9.72917 4.51058C9.72917 5.56039 10.1462 6.56721 10.8885 7.30954C11.6309 8.05188 12.6377 8.46891 13.6875 8.46891Z"
             fill="white"></path>
         </svg>
-        <p class="text-sm font-esamanru text-center">PEMBUKAAN BESAR</p>
+        <p class="text-sm font-esamanru text-center">PERESMIAN PEMBUKAAN</p>
       </div>
       <div data-aos="zoom-in" class={boxStyle.light}>
         <h4 class="text-3xl font-esamanru font-bold">Step 08</h4>
@@ -339,7 +268,7 @@ const boxStyle = {
             d="M83.6211 55.9689H75.7044V44.0939C75.7044 43.0441 75.2874 42.0373 74.5451 41.295C73.8027 40.5526 72.7959 40.1356 71.7461 40.1356H47.9961V32.2189H55.9128C56.9626 32.2189 57.9694 31.8019 58.7117 31.0595C59.4541 30.3172 59.8711 29.3104 59.8711 28.2606V4.51058C59.8711 3.46076 59.4541 2.45395 58.7117 1.71161C57.9694 0.969283 56.9626 0.552246 55.9128 0.552246H32.1628C31.1129 0.552246 30.1061 0.969283 29.3638 1.71161C28.6215 2.45395 28.2044 3.46076 28.2044 4.51058V28.2606C28.2044 29.3104 28.6215 30.3172 29.3638 31.0595C30.1061 31.8019 31.1129 32.2189 32.1628 32.2189H40.0794V40.1356H16.3294C15.2796 40.1356 14.2728 40.5526 13.5305 41.295C12.7881 42.0373 12.3711 43.0441 12.3711 44.0939V55.9689H4.45443C3.40461 55.9689 2.39779 56.386 1.65546 57.1283C0.913131 57.8706 0.496094 58.8774 0.496094 59.9272V83.6772C0.496094 84.7271 0.913131 85.7339 1.65546 86.4762C2.39779 87.2186 3.40461 87.6356 4.45443 87.6356H28.2044C29.2542 87.6356 30.2611 87.2186 31.0034 86.4762C31.7457 85.7339 32.1628 84.7271 32.1628 83.6772V59.9272C32.1628 58.8774 31.7457 57.8706 31.0034 57.1283C30.2611 56.386 29.2542 55.9689 28.2044 55.9689H20.2878V48.0522H67.7878V55.9689H59.8711C58.8213 55.9689 57.8145 56.386 57.0721 57.1283C56.3298 57.8706 55.9128 58.8774 55.9128 59.9272V83.6772C55.9128 84.7271 56.3298 85.7339 57.0721 86.4762C57.8145 87.2186 58.8213 87.6356 59.8711 87.6356H83.6211C84.6709 87.6356 85.6777 87.2186 86.4201 86.4762C87.1624 85.7339 87.5794 84.7271 87.5794 83.6772V59.9272C87.5794 58.8774 87.1624 57.8706 86.4201 57.1283C85.6777 56.386 84.6709 55.9689 83.6211 55.9689ZM24.2461 63.8856V79.7189H8.41276V63.8856H24.2461ZM36.1211 24.3022V8.46891H51.9544V24.3022H36.1211ZM79.6628 79.7189H63.8294V63.8856H79.6628V79.7189Z"
             fill="#5C3217"></path>
         </svg>
-        <p class="text-sm font-esamanru text-center">OPERASI PENGELOLAAN</p>
+        <p class="text-sm font-esamanru text-center">PENGELOLAAN OPERASIONAL</p>
       </div>
     </div>
   </section>

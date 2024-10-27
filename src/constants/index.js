@@ -14,57 +14,57 @@ export const MENU_PIZZA = [
   {
     img: realCheese,
     name: "real cheese",
-    description: "Campuran Keju Lezat, Saus Pizza",
+    description: "Keju Spesial, Saus Pizza",
   },
   {
     img: condensedMilk,
     name: "condensed milk",
-    description: "Susu Kental Manis, Campuran Keju, Saus Putih",
+    description: "Susu Kental Manis, Keju Spesial, Saus Putih",
   },
   {
     img: sweetPotato,
     name: "sweet potato",
-    description: "Ubi Jalar, Jagung Manis, Saus Putih",
+    description: "Ubi Manis, Jagung, Saus Putih",
   },
   {
     img: sweetPineapple,
     name: "sweet pineapple",
-    description: "Campuran Nanas, Ubi Jalar, Keju",
+    description: "Nanas, Ubi Manis, Keju Spesial",
   },
   {
     img: sweetCorn,
     name: "sweet corn",
-    description: "Jagung Manis, Campuran Keju, Saus Pizza",
+    description: "Jagung, Saus Spesial, Saus Pizza",
   },
   {
     img: pepperoni,
     name: "pepperoni",
-    description: "Pepperoni, Campuran Keju, Saus Pizza",
+    description: "Pepperoni, Keju Spesial, Saus Pizza",
   },
   {
     img: aloha,
     name: "aloha",
-    description: "Daging Kalkun, Nanas, Saus Putih",
+    description: "Ayam, Nanas, Saus Putih",
   },
   {
     img: crispyPotatoBacon,
-    name: "crispy potato bacon",
-    description: "Daging Kalkun Asap, Kentang Goreng, Saus Pizza",
+    name: "crispy potato rasher",
+    description: "Ayam, Kentang, Saus Pizza",
   },
   {
     img: sweetBulgogi,
     name: "sweet bulgogi",
-    description: "Bulgogi Ayam/Daging Sapi Pedas, Ayam Cincang, Saus Pizza",
+    description: "Ayam Bulgogi, Ayam Cincang, Saus Pizza",
   },
   {
     img: chickenLongSausage,
     name: "chicken long sausage",
-    description: "Sosis Ayam, Daging Ayam Cincang, Saus Mustard Madu",
+    description: "Sosis Ayam, Ayam Cincang, Saus Honey Mustard",
   },
   {
     img: hotSpicyChicken,
     name: "spicy chicken",
-    description: "Ayam Pedas Korea, Jagung Manis, Saus Chipotle",
+    description: "Ayam Pedas ala Korea, Jagung, Saus Chipotle",
   },
 ];
 

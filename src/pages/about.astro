@@ -7,8 +7,10 @@ import realCheese from "@/assets/images/real-cheese.png";
 import adonan from "@/assets/images/adonan.png";
 import ingredients from "@/assets/images/ingredients.png";
 import handmade from "@/assets/images/handmade.png";
+import AboutSection from "@/components/About-section.astro";
 
 import Layout from "../layout/MainLayout.astro";
+const aboutStyle = "about grid grid-cols-1 relative pt-20";
 const title = "About Page";
 const metaDesc =
   "Mengenal Eat Pizza, pelopor pizza persegi panjang di Indonesia. Dengan cita rasa otentik Korea dan konsep bisnis yang menguntungkan, Eat Pizza adalah pilihan tepat bagi para pecinta pizza dan pengusaha kuliner.";
@@ -16,116 +18,5 @@ const metaDesc =
 
 <Layout title={title} metaDesc={metaDesc}>
   <!-- About Section -->
-  <section class="about grid grid-cols-1 relative pt-20">
-    <Image src={aboutImg} class="w-full" alt="about" />
-    <div
-      class="about-content flex flex-col justify-center items-center bg-white z-20 relative pb-8 desktop:gap-20"
-    >
-      <Image
-        src={aboutShape}
-        class="w-full left-0 right-0 absolute -top-16 z-10 tablet:-top-28 laptop:-top-36 desktop:-top-64"
-        alt="About shape"
-      />
-      <Image
-        src={cheeseImg}
-        class="absolute -top-24 z-10 left-0 w-32 laptop:w-52 laptop:-top-36 desktop:w-96 desktop:left-20 desktop:-top-72"
-        alt="Cheese"
-      />
-      <h1
-        class="text-3xl font-esamanru text-dark font-bold z-20 tablet:text-4xl laptop:text-5xl desktop:text-7xl"
-      >
-        Cerita Kami
-      </h1>
-      <div class="stories mt-4 z-20">
-        <div
-          class="story group flex flex-col gap-4 items-center border-b border-dark px-10 pb-10 tablet:px-20 laptop:flex-row laptop:justify-between w-full laptop:gap-10 desktop:gap-20 laptop:px-20"
-        >
-          <div class="text text-center flex flex-col gap-2 laptop:gap-4 laptop:text-left">
-            <h4
-              class="text-lg font-light font-esamanru text-black laptop:text-2xl desktop:text-3xl desktop:font-medium"
-            >
-              Adonan Homemade yang Lezat
-            </h4>
-            <p
-              class="font-light font-esamanru text-sm laptop:text-base desktop:text-xl desktop:font-medium"
-            >
-              Nikmati pizza premium yang lebih lembut dan moist, dengan adonan yang diproses
-              langsung di tempat dan diperkaya dengan minyak zaitun murni.
-            </p>
-          </div>
-          <Image
-            src={adonan}
-            alt="Adonan"
-            class="relative right-0 w-52 rounded-md laptop:group-hover:w-96 laptop:group-hover:rounded-full duration-300"
-          />
-        </div>
-        <div
-          class="story group flex flex-col gap-4 items-center border-b border-dark p-10 tablet:px-20 laptop:flex-row laptop:justify-between w-full laptop:gap-10 desktop:gap-20 laptop:px-20"
-        >
-          <div class="text text-center flex flex-col gap-2 laptop:gap-4 laptop:text-left">
-            <h4
-              class="text-lg font-light font-esamanru text-black laptop:text-2xl desktop:text-3xl desktop:font-medium"
-            >
-              Perpaduan 100% Keju Asli
-            </h4>
-            <p
-              class="font-light font-esamanru text-sm laptop:text-base desktop:text-xl desktop:font-medium"
-            >
-              Campuran spesial keju kami, yang 100% alami, memberikan cita rasa keju yang kaya dan
-              tidak bisa kamu temukan di pizza lainnya.
-            </p>
-          </div>
-          <Image
-            src={realCheese}
-            alt="Real cheese"
-            class="relative right-0 w-52 rounded-md laptop:group-hover:w-96 laptop:group-hover:rounded-full duration-300"
-          />
-        </div>
-        <div
-          class="story group flex flex-col gap-4 items-center border-b border-dark p-10 tablet:px-20 laptop:flex-row laptop:justify-between w-full laptop:gap-10 desktop:gap-20 laptop:px-20"
-        >
-          <div class="text text-center flex flex-col gap-2 laptop:gap-4 laptop:text-left">
-            <h4
-              class="text-lg font-light font-esamanru text-black laptop:text-2xl desktop:text-3xl desktop:font-medium"
-            >
-              Bahan Sehat dan Segar
-            </h4>
-            <p
-              class="font-light font-esamanru text-sm laptop:text-base desktop:text-xl desktop:font-medium"
-            >
-              Eat Pizza membuat pizza seperti untuk keluarga sendiri, dengan hanya memilih
-              bahan-bahan yang lebih sehat dan segar.
-            </p>
-          </div>
-          <Image
-            src={ingredients}
-            alt="Ingredients"
-            class="relative right-0 w-52 rounded-md laptop:group-hover:w-96 laptop:group-hover:rounded-full duration-300"
-          />
-        </div>
-        <div
-          class="story group flex flex-col gap-4 items-center p-10 tablet:px-20 laptop:flex-row laptop:justify-between w-full laptop:gap-10 desktop:gap-20 laptop:px-20"
-        >
-          <div class="text text-center flex flex-col gap-2 laptop:gap-4 laptop:text-left">
-            <h4
-              class="text-lg font-light font-esamanru text-black laptop:text-2xl desktop:text-3xl desktop:font-medium"
-            >
-              Pizza Handmade di Tempat
-            </h4>
-            <p
-              class="font-light font-esamanru text-sm laptop:text-base desktop:text-xl desktop:font-medium"
-            >
-              Eat Pizza nggak jual pizza beku! Setelah kamu pesan, kami langsung kasih topping di
-              atas adonan yang sudah diproses sempurna, lalu dipanggang langsung di oven.
-            </p>
-          </div>
-          <Image
-            src={handmade}
-            alt="Handmade"
-            class="relative right-0 w-52 rounded-md laptop:group-hover:w-96 laptop:group-hover:rounded-full duration-300"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
+  <AboutSection aboutStyle={aboutStyle}/>
 </Layout>
