@@ -1,4 +1,4 @@
-import { DOMICILES } from "@/constants";
+import { CITIES, BUSINESS_TYPES, CAPITALS, START_DATES } from "@/constants";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
@@ -8,7 +8,10 @@ export const ContactForm = () => {
     "last name": "",
     "phone number": "",
     email: "",
-    domicile: "denpasar",
+    "business type": "",
+    "available capital": "",
+    "intended start date": "",
+    "intended city": "",
     comment: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -41,7 +44,10 @@ export const ContactForm = () => {
           "last name": "",
           "phone number": "",
           email: "",
-          domicile: "denpasar",
+          "business type": "",
+          "available capital": "",
+          "intended start date": "",
+          "intended city": "",
           comment: "",
         });
       } else {
@@ -61,7 +67,7 @@ export const ContactForm = () => {
     <div className="relative z-10 flex flex-col justify-center gap-6 rounded-lg bg-white p-5 tablet:p-10 laptop:gap-10 laptop:rounded-none laptop:rounded-bl-lg laptop:rounded-tl-lg desktop:p-24">
       <div className="flex flex-col gap-2 laptop:gap-5">
         <h2 className="font-esamanru text-xl font-semibold text-black desktop:text-5xl desktop:leading-tight">
-          Tertarik jadi bagian dari keluarga besar EatPizza Indonesia?
+          Tertarik jadi bagian dari keluarga besar Eat Pizza Indonesia?
         </h2>
         <p className="font-esamanru text-sm font-medium text-black desktop:text-3xl">
           Isi form di bawah ini untuk mulai perjalanan seru bareng kami!
@@ -79,7 +85,6 @@ export const ContactForm = () => {
               id="firstName"
               name="first name"
               type="text"
-              placeholder="Agus"
               value={formData["first name"]}
               onChange={handleChange}
               className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
@@ -94,7 +99,6 @@ export const ContactForm = () => {
               id="lastName"
               name="last name"
               type="text"
-              placeholder="Setiawan"
               value={formData["last name"]}
               onChange={handleChange}
               className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
@@ -114,7 +118,7 @@ export const ContactForm = () => {
               required
               id="phoneNumber"
               name="phone number"
-              type="number"
+              type="text"
               placeholder="+62"
               value={formData["phone number"]}
               onChange={handleChange}
@@ -130,7 +134,6 @@ export const ContactForm = () => {
               id="email"
               name="email"
               type="email"
-              placeholder="agussetiawan@gmail.com"
               value={formData.email}
               onChange={handleChange}
               className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
@@ -139,19 +142,89 @@ export const ContactForm = () => {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label htmlFor="domicile" className="font-esamanru text-sm text-black desktop:text-lg">
-            Domisili
+          <label
+            htmlFor="business type"
+            className="font-esamanru text-sm text-black desktop:text-lg"
+          >
+            Tipe Bisnis
           </label>
           <select
-            id="domicile"
-            name="domicile"
-            value={formData.domicile}
+            id="business type"
+            name="business type"
+            value={formData["business type"]}
             onChange={handleChange}
             className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
           >
-            {DOMICILES.map((dom) => (
-              <option key={dom} value={dom}>
-                {dom}
+            <option value="">Pilih tipe bisnis Anda</option>
+            {BUSINESS_TYPES.map((business) => (
+              <option key={business} value={business}>
+                {business}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <label htmlFor="capital" className="font-esamanru text-sm text-black desktop:text-lg">
+            Ketersediaan Modal
+          </label>
+          <select
+            id="capital"
+            name="available capital"
+            value={formData["available capital"]}
+            onChange={handleChange}
+            className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
+          >
+            <option value="">Pilih ketersediaan modal Anda</option>
+            {CAPITALS.map((cap) => (
+              <option key={cap} value={cap}>
+                {cap}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <label
+            htmlFor="intended start date"
+            className="font-esamanru text-sm text-black desktop:text-lg"
+          >
+            Tanggal Mulai
+          </label>
+          <select
+            id="intended start date"
+            name="intended start date"
+            value={formData["intended start date"]}
+            onChange={handleChange}
+            className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
+          >
+            <option value="">Pilih tanggal mulai Anda</option>
+            {START_DATES.map((date) => (
+              <option key={date} value={date}>
+                {date}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <label
+            htmlFor="intended city"
+            className="font-esamanru text-sm text-black desktop:text-lg"
+          >
+            Intended City
+          </label>
+          <select
+            id="intended city"
+            name="intended city"
+            value={formData["intended city"]}
+            onChange={handleChange}
+            className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
+          >
+            <option value="">Pilih kota Anda</option>
+            {CITIES.map((city) => (
+              <option key={city} value={city}>
+                {city}
               </option>
             ))}
           </select>
@@ -170,11 +243,6 @@ export const ContactForm = () => {
             className="h-32 w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
           />
         </div>
-
-        <p className="font-esamanru text-sm font-light text-slate-900 desktop:text-lg desktop:font-medium">
-          Pengajuan pernyataan ini tidak mewajibkan Anda atau kami untuk berpartisipasi atau memberi
-          Anda peluang bisnis apa pun
-        </p>
 
         <button
           type="submit"
