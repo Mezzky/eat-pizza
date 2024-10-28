@@ -63,7 +63,7 @@ export const MENU_PIZZA = [
   },
   {
     img: hotSpicyChicken,
-    name: "spicy chicken",
+    name: "hot spicy chicken",
     description: "Ayam Pedas ala Korea, Jagung, Saus Chipotle",
   },
 ];

@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import { ContactForm } from "@/components/contact-form";
 import contactShape from "@/assets/images/contact-shape.svg";
 
+import FlyoutBox from "@/components/flyout-box.astro";
 import Layout from "../layout/MainLayout.astro";
 const title = "Contact Page";
 const metaDesc =
@@ -10,6 +11,9 @@ const metaDesc =
 ---
 
 <Layout title={title} metaDesc={metaDesc}>
+  <!-- Flyout Box -->
+  <FlyoutBox/>
+
   <!-- Contact Section -->
   <section
     class="contact relative flex flex-col gap-10 justify-center items-center w-full pt-28 pb-8 px-5 bg-[#BF212A] tablet:pt-32 tablet:pb-16 tablet:px-10 laptop:px-20 laptop:pt-36"
