@@ -1,13 +1,6 @@
 ---
-import { Image } from "astro:assets";
-import aboutImg from "@/assets/images/about-img.png";
-import aboutShape from "@/assets/images/about-shape.png";
-import cheeseImg from "@/assets/images/cheese-img.png";
-import realCheese from "@/assets/images/real-cheese.png";
-import adonan from "@/assets/images/adonan.png";
-import ingredients from "@/assets/images/ingredients.png";
-import handmade from "@/assets/images/handmade.png";
 import AboutSection from "@/components/About-section.astro";
+import FlyoutBox from "@/components/flyout-box.astro";
 
 import Layout from "../layout/MainLayout.astro";
 const aboutStyle = "about grid grid-cols-1 relative pt-20";
@@ -17,6 +10,8 @@ const metaDesc =
 ---
 
 <Layout title={title} metaDesc={metaDesc}>
+  <!-- Flyout Box -->
+  <FlyoutBox/>
   <!-- About Section -->
   <AboutSection aboutStyle={aboutStyle}/>
 </Layout>

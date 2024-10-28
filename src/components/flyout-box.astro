@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import close from "@/assets/images/close.svg";
+---
+<!-- Flyout Bubble -->
+<div
+id="flyoutBubble"
+data-aos="zoom-in"
+class="flex w-24 z-30 p-5 fixed right-5 bottom-10 border-2 border-white rounded-lg flex-col gap-1 justify-center items-center bg-bubble-bg bg-cover bg-center bg-no-repeat desktop:w-40"
+>
+<div class="bg-red-800/60 absolute w-full h-full rounded-lg"></div>
+<button
+  id="closeButton"
+  class="absolute z-20 top-1 right-1 text-white text-lg focus:outline-none"
+>
+  <Image class="desktop:w-8" src={close} alt="close" />
+</button>
+<p class="z-10 text-[12px] font-esamanru text-white text-center desktop:text-xl">
+  Gabung Bersama Kami!
+</p>
+<a
+  class="z-10 text-[12px] self-stretch text-center rounded-sm bg-third px-2 py-1 font-medium text-white hover:bg-opacity-80 disabled:cursor-not-allowed disabled:opacity-50 desktop:text-xl"
+  href="/partner">Klik!</a
+>
+</div>
+
+<script>
+    document.getElementById("closeButton").addEventListener("click", function () {
+      document.getElementById("flyoutBubble").style.display = "none";
+    });
+</script>
