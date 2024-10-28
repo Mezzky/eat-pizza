@@ -5,8 +5,7 @@ import menuToggle from "@/assets/images/menu-toggle.png";
 
 const styles = {
   navLinks: "font-esamanru font-semibold text-dark hover:text-third duration-200",
-  navBtn:
-    "font-esamanru font-medium text-white bg-dark py-2 rounded-sm px-4 hover:bg-third duration-200 laptop:px-6 laptop:py-4",
+  navBtn: "font-esamanru font-medium text-white bg-dark py-2 rounded-sm px-4 hover:bg-third duration-200 laptop:px-6 laptop:py-4",
 };
 
 // Array of navigation links
@@ -16,6 +15,7 @@ const navLinks = [
   { name: "Menu", href: "/menu" },
   { name: "Store", href: "/store" },
   { name: "Partnership", href: "/partner" },
+  { name: "Contact Us", href: "/contact" },
 ];
 ---
 
@@ -27,14 +27,22 @@ const navLinks = [
     </a>
 
     <!-- Hamburger icon for mobile view -->
-    <div class="tablet:hidden">
+    <!-- <div class="tablet:hidden">
       <button id="menu-toggle" class="duration-300 ease-in-out">
         <Image src={menuToggle} alt="menu" class="w-12" />
+      </button>
+    </div> -->
+
+    <div class="menu-toggle relative flex items-center h-[30px] w-[30px] laptop:hidden">
+      <button id="menu-toggle" class="absolute flex flex-col items-end gap-2">
+          <span class="bg-dark rounded-lg h-[3px] w-[35px] block transition ease-in-out duration-300 origin-top-right"></span>
+          <span class="bg-dark rounded-lg h-[3px] w-[25px] block transition ease-in-out duration-300"></span>
+          <span class="bg-dark rounded-lg h-[3px] w-[15px] block transition ease-in-out duration-300 origin-bottom-right"></span>
       </button>
     </div>
 
     <!-- Navigation Links for larger screens -->
-    <ul class="hidden tablet:flex space-x-4">
+    <ul class="hidden laptop:flex space-x-4">
       {
         navLinks.map((link) => (
           <li>
@@ -44,13 +52,15 @@ const navLinks = [
           </li>
         ))
       }
-      <li><a href="/contact" class={styles.navBtn}>Contact Us</a></li>
+      <li>
+        <button onclick="alert('Coming Soon!')" class={styles.navLinks}>Loyalty Program</button>
+      </li>
     </ul>
   </nav>
 
   <!-- Mobile Menu (Initially hidden) -->
   <ul
-    class="tablet:hidden -translate-x-full transition-transform duration-300 ease-in-out fixed p-5 bg-main w-full h-full left-0"
+    class="laptop:hidden -translate-x-full transition-transform duration-300 ease-in-out fixed p-5 bg-main w-full h-full left-0"
     id="mobile-menu"
   >
     {
@@ -62,7 +72,9 @@ const navLinks = [
         </li>
       ))
     }
-    <li><a href="/contact" class={styles.navBtn}>Contact Us</a></li>
+    <li class="p-2">
+      <button onclick="alert('Coming Soon!')" class={styles.navLinks}>Loyalty Program</button>
+    </li>
   </ul>
 </header>
 
@@ -73,5 +85,6 @@ const navLinks = [
 
   menuToggle.addEventListener("click", () => {
     mobileMenu.classList.toggle("-translate-x-full");
+    menuToggle.classList.toggle('hamburger-active');
   });
 </script>

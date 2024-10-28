@@ -134,22 +134,15 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-/* Animation */
-/* @keyframes appear{
-  from{
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to{
-    opacity: 1;
-    transform: translateX(0%);
-  }
+/* Menu Toggle Animation */
+.hamburger-active > span:nth-child(1) {
+  @apply -rotate-[40deg];
 }
 
-.appear-animation{
-  animation: appear linear 3s;
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
 }
 
-.appear-animation-right{
-  animation: appear linear 3s reverse;
-} */
+.hamburger-active > span:nth-child(3) {
+  @apply w-[35px] rotate-[40deg];
+}

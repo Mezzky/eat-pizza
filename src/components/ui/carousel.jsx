@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
 import useEmblaCarousel from "embla-carousel-react";
 
 import { cn } from "@/lib/utils";
@@ -48,10 +48,10 @@ const Carousel = React.forwardRef(
 
     const handleKeyDown = React.useCallback(
       (event) => {
-        if (event.key === "ArrowLeft") {
+        if (event.key === "ChevronLeft") {
           event.preventDefault();
           scrollPrev();
-        } else if (event.key === "ArrowRight") {
+        } else if (event.key === "ChevronRight") {
           event.preventDefault();
           scrollNext();
         }
@@ -154,7 +154,7 @@ const CarouselPrevious = React.forwardRef(
         variant={variant}
         size={size}
         className={cn(
-          "absolute h-8 w-8 rounded-full border-transparent bg-third text-white",
+          "absolute font-bold h-8 w-8 tablet:h-10 tablet:w-10 rounded-full border-transparent bg-third text-white text-3xl",
           orientation === "horizontal"
             ? "-left-12 top-1/2 -translate-y-1/2"
             : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -164,7 +164,7 @@ const CarouselPrevious = React.forwardRef(
         onClick={scrollPrev}
         {...props}
       >
-        <ArrowLeftIcon className="h-4 w-4" />
+        <ChevronLeftIcon className="text-xl font-bold" />
         <span className="sr-only">Previous slide</span>
       </Button>
     );
@@ -182,7 +182,7 @@ const CarouselNext = React.forwardRef(
         variant={variant}
         size={size}
         className={cn(
-          "absolute h-8 w-8 rounded-full border-transparent bg-third text-white",
+          "absolute font-bold h-8 w-8 tablet:h-10 tablet:w-10 rounded-full border-transparent bg-third text-white text-3xl",
           orientation === "horizontal"
             ? "-right-12 top-1/2 -translate-y-1/2"
             : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -192,7 +192,7 @@ const CarouselNext = React.forwardRef(
         onClick={scrollNext}
         {...props}
       >
-        <ArrowRightIcon className="h-4 w-4" />
+        <ChevronRightIcon className="text-xl font-bold" />
         <span className="sr-only">Next slide</span>
       </Button>
     );
