@@ -69,24 +69,53 @@ export const MENU_PIZZA = [
 ];
 
 export const CITIES = [
-  "Denpasar",
-  "Badung",
-  "Gianyar",
-  "Tabanan",
-  "Bangli",
-  "Buleleng",
-  "Jembrana",
-  "Karangasem",
-  "Klungkung",
+  "Aceh",
+  "Ambon",
+  "Balikpapan",
+  "Bali",
+  "Bandung",
+  "Bekasi",
+  "Bogor",
+  "Cirebon",
+  "Depok",
+  "Jakarta",
+  "Jambi",
+  "Jayapura",
+  "Kediri",
+  "Kupang",
+  "Lampung",
+  "Lombok",
+  "Makassar",
+  "Malang",
+  "Manado",
+  "Mataram",
+  "Medan",
+  "Padang",
+  "Palembang",
+  "Palu",
+  "Pangkal Pinang",
+  "Pekanbaru",
+  "Pontianak",
+  "Probolinggo",
+  "Samarinda",
+  "Semarang",
+  "Solo",
+  "Sukabumi",
+  "Surabaya",
+  "Tangerang",
+  "Ternate",
+  "Yogyakarta",
 ];
 
 export const BUSINESS_TYPES = ["Satu Unit", "Beberapa Unit"];
 
 export const CAPITALS = [
-  "US$50,000 - US$99,999",
-  "US$100,000 - US$199,999",
-  "US$200,000 - US$299,999",
-  "US$300,000 or More",
+  "Rp300.000.000 - Rp499.000.000",
+  "Rp500.000.000 - Rp999.999.999",
+  "> Rp999.999.999",
 ];
 
 export const START_DATES = ["Segera", "3 - 6 Bulan", "> 6 Bulan"];
+
+console.log(new Date().toISOString());
+console.log(new Date().toLocaleString());

@@ -1,18 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import partnerImg from "@/assets/images/partner-img.png";
-import pizzaBg from "@/assets/images/pizza-bg.png";
-import pizzaBgLarge from "@/assets/images/pizza-bg-large.png";
-import learnGif from "@/assets/images/learn.gif";
-import readyGif from "@/assets/images/ready.gif";
-import cookGif from "@/assets/images/cook.gif";
-import freshGif from "@/assets/images/fresh.gif";
 import intersect from "@/assets/images/intersect.png";
-
-import { ContactForm } from "@/components/contact-form";
 import BenefitBox from "@/components/Benefit-box.astro";
-
 import Layout from "../layout/MainLayout.astro";
+import { PartnershipContactForm } from "@/components/partnership-contact-form";
+
 const title = "Partnership Page";
 const metaDesc =
   "Bermitra dengan Eat Pizza dan raih kesuksesan bersama! Kami menawarkan peluang bisnis kuliner yang menjanjikan dengan dukungan penuh dari tim kami. Jadilah bagian dari jaringan franchise pizza terkemuka di Indonesia.";
@@ -70,7 +63,8 @@ const boxStyle = {
           <h3 class="text-5xl font-bold font-esamanru self-start tablet:hidden">01</h3>
           <h4 class="font-semibold font-esamanru">Keuntungan Maksimal</h4>
           <p class="font-esamanru text-sm">
-            Sistem yang fleksibel mengurangi biaya sewa, tenaga kerja, dan operasional untuk menghasilkan profit yang luar biasa.
+            Sistem yang fleksibel mengurangi biaya sewa, tenaga kerja, dan operasional untuk
+            menghasilkan profit yang luar biasa.
           </p>
         </div>
         <h3 class="text-5xl font-bold font-esamanru hidden tablet:block">01</h3>
@@ -90,7 +84,8 @@ const boxStyle = {
           <h3 class="text-5xl font-bold font-esamanru self-start tablet:hidden">03</h3>
           <h4 class="font-semibold font-esamanru">Dapur Tanpa Ribet</h4>
           <p class="font-esamanru text-sm">
-            Bikin Pizza cuma dalam 20 detik dengan 3 langkah simpel: tambahin saus, keju, dan topping di atas adonan.
+            Bikin Pizza cuma dalam 20 detik dengan 3 langkah simpel: tambahin saus, keju, dan
+            topping di atas adonan.
           </p>
         </div>
         <h3 class="text-5xl font-bold font-esamanru hidden tablet:block">03</h3>
@@ -100,7 +95,8 @@ const boxStyle = {
           <h3 class="text-5xl font-bold font-esamanru self-start tablet:hidden">04</h3>
           <h4 class="font-semibold font-esamanru">Operasional Super Simpel</h4>
           <p class="font-esamanru text-sm">
-            Mayoritas produk sudah siap dari dapur pusat, jadi operasional di toko lebih cepat dan efisien.
+            Mayoritas produk sudah siap dari dapur pusat, jadi operasional di toko lebih cepat dan
+            efisien.
           </p>
         </div>
         <h3 class="text-5xl font-bold font-esamanru hidden tablet:block">04</h3>
@@ -110,7 +106,8 @@ const boxStyle = {
           <h3 class="text-5xl font-bold font-esamanru self-start tablet:hidden">05</h3>
           <h4 class="font-semibold font-esamanru">Proses Cepat</h4>
           <p class="font-esamanru text-sm">
-            Pizza bisa disajikan dalam 5 menit setelah masuk oven, jadi lebih cepat dan tidak bikin antrian panjang.
+            Pizza bisa disajikan dalam 5 menit setelah masuk oven, jadi lebih cepat dan tidak bikin
+            antrian panjang.
           </p>
         </div>
         <h3 class="text-5xl font-bold font-esamanru hidden tablet:block">05</h3>
@@ -120,7 +117,8 @@ const boxStyle = {
           <h3 class="text-5xl font-bold font-esamanru self-start tablet:hidden">06</h3>
           <h4 class="font-semibold font-esamanru">Jualan Dengan 6 Cara</h4>
           <p class="font-esamanru text-sm">
-            Maksimalkan penjualan lewat banyak konsep: makan di tempat, kios, delivery, makan siang, makan malam, sampai camilan!
+            Maksimalkan penjualan lewat banyak konsep: makan di tempat, kios, delivery, makan siang,
+            makan malam, sampai camilan!
           </p>
         </div>
         <h3 class="text-5xl font-bold font-esamanru hidden tablet:block">06</h3>
@@ -129,7 +127,7 @@ const boxStyle = {
   </section>
 
   <!-- Benefit Box -->
-  <BenefitBox/>
+  <BenefitBox />
 
   <!-- Procedure Section -->
   <section
@@ -143,7 +141,8 @@ const boxStyle = {
     <p
       class="text-sm text-center text-stroke-1 font-esamanru font-bold text-stroke-dark text-shadow-sm text-white tablet:text-lg laptop:text-3xl laptop:text-stroke-2 laptop:text-shadow-xl"
     >
-      Ahli distrik komersial kami dengan pengalaman lebih dari 15 tahun akan menemukan lokasi terbaik untuk Anda
+      Ahli distrik komersial kami dengan pengalaman lebih dari 15 tahun akan menemukan lokasi
+      terbaik untuk Anda
     </p>
     <div
       class="procedure-box grid grid-cols-1 gap-2 tablet:grid-cols-2 tablet:gap-4 laptop:grid-cols-4"
@@ -176,9 +175,7 @@ const boxStyle = {
             d="M79.1667 23.0472C79.1857 22.7969 79.1857 22.5455 79.1667 22.2951L71.25 2.50346C70.9408 1.72112 70.3904 1.05763 69.6787 0.609224C68.9669 0.160821 68.1308 -0.0491701 67.2917 0.00971136H11.875C11.0822 0.00894392 10.3075 0.246241 9.65114 0.690864C8.99479 1.13549 8.48707 1.76695 8.19375 2.50346L0.277083 22.2951C0.258003 22.5455 0.258003 22.7969 0.277083 23.0472C0.145551 23.2676 0.051892 23.5084 0 23.7597C0.0440586 26.4959 0.796519 29.1739 2.18399 31.5326C3.57146 33.8913 5.54657 35.8501 7.91667 37.218V75.218C7.91667 76.2679 8.3337 77.2747 9.07604 78.017C9.81837 78.7593 10.8252 79.1764 11.875 79.1764H67.2917C68.3415 79.1764 69.3483 78.7593 70.0906 78.017C70.833 77.2747 71.25 76.2679 71.25 75.218V37.3764C73.643 35.9948 75.6328 34.0111 77.0217 31.6223C78.4105 29.2335 79.15 26.5228 79.1667 23.7597C79.2037 23.5237 79.2037 23.2833 79.1667 23.0472ZM43.5417 71.2597H35.625V55.4264H43.5417V71.2597ZM63.3333 71.2597H51.4583V51.468C51.4583 50.4182 51.0413 49.4114 50.299 48.6691C49.5566 47.9268 48.5498 47.5097 47.5 47.5097H31.6667C30.6168 47.5097 29.61 47.9268 28.8677 48.6691C28.1254 49.4114 27.7083 50.4182 27.7083 51.468V71.2597H15.8333V39.593C18.0875 39.5803 20.3129 39.0864 22.3608 38.1444C24.4087 37.2024 26.2319 35.8339 27.7083 34.1305C29.1942 35.8153 31.0215 37.1646 33.0689 38.0889C35.1163 39.0131 37.337 39.4911 39.5833 39.4911C41.8297 39.4911 44.0503 39.0131 46.0978 38.0889C48.1452 37.1646 49.9725 35.8153 51.4583 34.1305C52.9348 35.8339 54.7579 37.2024 56.8058 38.1444C58.8537 39.0864 61.0792 39.5803 63.3333 39.593V71.2597ZM63.3333 31.6764C61.2337 31.6764 59.2201 30.8423 57.7354 29.3576C56.2507 27.873 55.4167 25.8593 55.4167 23.7597C55.4167 22.7099 54.9996 21.7031 54.2573 20.9607C53.515 20.2184 52.5081 19.8014 51.4583 19.8014C50.4085 19.8014 49.4017 20.2184 48.6594 20.9607C47.917 21.7031 47.5 22.7099 47.5 23.7597C47.5 25.8593 46.6659 27.873 45.1813 29.3576C43.6966 30.8423 41.683 31.6764 39.5833 31.6764C37.4837 31.6764 35.4701 30.8423 33.9854 29.3576C32.5007 27.873 31.6667 25.8593 31.6667 23.7597C31.6667 22.7099 31.2496 21.7031 30.5073 20.9607C29.765 20.2184 28.7581 19.8014 27.7083 19.8014C26.6585 19.8014 25.6517 20.2184 24.9094 20.9607C24.167 21.7031 23.75 22.7099 23.75 23.7597C23.789 24.7993 23.6228 25.8365 23.261 26.8119C22.8992 27.7873 22.3487 28.6819 21.6412 29.4446C20.9336 30.2073 20.0828 30.8232 19.1372 31.257C18.1916 31.6909 17.1698 31.9343 16.1302 31.9733C14.0306 32.052 11.9857 31.2934 10.4453 29.8644C9.68263 29.1569 9.06676 28.306 8.6329 27.3604C8.19903 26.4149 7.95565 25.3931 7.91667 24.3535L14.5667 7.92638H64.6L71.25 24.3535C71.1 26.3485 70.2001 28.2128 68.7314 29.5714C67.2627 30.9299 65.334 31.682 63.3333 31.6764Z"
             fill="white"></path>
         </svg>
-        <p class="text-sm font-esamanru text-center">
-          SURVEY LOKASI DAN PENGEMBANGAN TOKO
-        </p>
+        <p class="text-sm font-esamanru text-center">SURVEY LOKASI DAN PENGEMBANGAN TOKO</p>
       </div>
       <div data-aos="zoom-in" class={boxStyle.light}>
         <h4 class="text-3xl font-esamanru font-bold">Step 03</h4>
@@ -278,7 +275,7 @@ const boxStyle = {
     <Image class="absolute -right-4 -top-4 laptop:w-80" src={intersect} alt="Intersect" />
     <Image class="absolute -left-4 -bottom-4 laptop:w-80" src={intersect} alt="Intersect" />
     <div class="contact-box grid relative z-10 laptop:grid-cols-custom-70-30">
-      <ContactForm client:idle />
+      <PartnershipContactForm client:idle />
       <div
         class="bg-contact bg-no-repeat bg-cover bg-center z1 laptop:rounded-tr-lg laptop:rounded-br-lg"
       >
@@ -287,12 +284,12 @@ const boxStyle = {
   </section>
 
   <script>
-    import AOS from 'aos';
-    import 'aos/dist/aos.css';
-  
+    import AOS from "aos";
+    import "aos/dist/aos.css";
+
     AOS.init({
       duration: 500,
-      easing: 'ease-in-out',
+      easing: "ease-in-out",
     });
   </script>
 </Layout>

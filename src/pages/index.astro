@@ -17,7 +17,6 @@ import { CarouselMenu } from "@/components/carousel-menu";
 import AboutSection from "@/components/About-section.astro";
 import BenefitBox from "@/components/Benefit-box.astro";
 
-
 const title = "Home Page";
 const aboutStyle = "about grid grid-cols-1 relative";
 const metaDesc =
@@ -128,7 +127,12 @@ const metaDesc =
     id="videoSection"
     class="video flex justify-center items-center relative"
   >
-    <video id="eatpizzaVideo" class="w-full cursor-pointer" src="/video/eatpizza-video.mp4" loop controls></video>
+    <video
+      id="eatpizzaVideo"
+      class="w-full cursor-pointer"
+      src="/video/eatpizza-video.mp4"
+      loop
+      controls></video>
 
     <!-- <button
       id="toggleButton"
@@ -174,7 +178,7 @@ const metaDesc =
   </section>
 
   <!-- About Section -->
-  <AboutSection aboutStyle={aboutStyle}/>
+  <AboutSection aboutStyle={aboutStyle} />
 
   <!-- Benefit Section -->
   <section class="benefit">
@@ -193,7 +197,7 @@ const metaDesc =
       </div>
       <Image class="w-20 tablet:w-32 laptop:w-52 desktop:w-96" src={redClock} alt="Red clock" />
     </div>
-    <BenefitBox/>
+    <BenefitBox />
   </section>
 
   <!-- Contact Section -->
@@ -232,12 +236,12 @@ const metaDesc =
     // const togglePlayPause = () => {
     //   if (video.paused) {
     //     video.play();
-    //     playIcon.classList.add("hidden"); 
-    //     pauseIcon.classList.remove("hidden"); 
+    //     playIcon.classList.add("hidden");
+    //     pauseIcon.classList.remove("hidden");
     //   } else {
     //     video.pause();
-    //     playIcon.classList.remove("hidden"); 
-    //     pauseIcon.classList.add("hidden"); 
+    //     playIcon.classList.remove("hidden");
+    //     pauseIcon.classList.add("hidden");
     //   }
     // };
 
@@ -248,17 +252,17 @@ const metaDesc =
     // videoSection.addEventListener("mouseenter", () => {
     //   toggleButton.classList.remove("opacity-0");
     //   if (video.paused) {
-    //     playIcon.classList.remove("hidden"); 
+    //     playIcon.classList.remove("hidden");
     //   } else {
-    //     pauseIcon.classList.remove("hidden"); 
+    //     pauseIcon.classList.remove("hidden");
     //   }
     // });
 
     // Hide the play/pause button on unhover
     // videoSection.addEventListener("mouseleave", () => {
-    //   toggleButton.classList.add("opacity-0"); 
-    //   playIcon.classList.add("hidden"); 
-    //   pauseIcon.classList.add("hidden"); 
+    //   toggleButton.classList.add("opacity-0");
+    //   playIcon.classList.add("hidden");
+    //   pauseIcon.classList.add("hidden");
     // });
 
     // Add click event listener to toggle play/pause
