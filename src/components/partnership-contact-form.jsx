@@ -2,13 +2,16 @@ import { CITIES, BUSINESS_TYPES, CAPITALS, START_DATES } from "@/constants";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
-export const ContactForm = () => {
+export const PartnershipContactForm = () => {
   const [formData, setFormData] = useState({
     "first name": "",
     "last name": "",
     "phone number": "",
     email: "",
     city: "",
+    "business type": "",
+    capital: "",
+    "start date": "",
     comment: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -42,6 +45,9 @@ export const ContactForm = () => {
           "phone number": "",
           email: "",
           city: "",
+          "business type": "",
+          capital: "",
+          "start date": "",
           comment: "",
         });
       } else {
@@ -69,7 +75,7 @@ export const ContactForm = () => {
       </div>
 
       <form onSubmit={handleSubmit} autoComplete="off" className="flex w-full flex-col gap-2">
-        <input type="hidden" name="formType" value="landing" />
+        <input type="hidden" name="formType" value="partnership" />
 
         <div className="grid grid-cols-2 gap-2">
           <div className="flex flex-col gap-1">
@@ -152,6 +158,69 @@ export const ContactForm = () => {
             {CITIES.map((city) => (
               <option key={city} value={city}>
                 {city}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <label
+            htmlFor="businessType"
+            className="font-esamanru text-sm text-black desktop:text-lg"
+          >
+            Tipe Bisnis
+          </label>
+          <select
+            id="businessType"
+            name="business type"
+            value={formData["business type"]}
+            onChange={handleChange}
+            className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
+          >
+            <option value="">Pilih tipe bisnis Anda</option>
+            {BUSINESS_TYPES.map((business) => (
+              <option key={business} value={business}>
+                {business}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <label htmlFor="capital" className="font-esamanru text-sm text-black desktop:text-lg">
+            Ketersediaan Modal
+          </label>
+          <select
+            id="capital"
+            name="capital"
+            value={formData.capital}
+            onChange={handleChange}
+            className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
+          >
+            <option value="">Pilih ketersediaan modal Anda</option>
+            {CAPITALS.map((cap) => (
+              <option key={cap} value={cap}>
+                {cap}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <label htmlFor="startDate" className="font-esamanru text-sm text-black desktop:text-lg">
+            Tanggal Mulai
+          </label>
+          <select
+            id="startDate"
+            name="start date"
+            value={formData["start date"]}
+            onChange={handleChange}
+            className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
+          >
+            <option value="">Pilih tanggal mulai Anda</option>
+            {START_DATES.map((date) => (
+              <option key={date} value={date}>
+                {date}
               </option>
             ))}
           </select>
