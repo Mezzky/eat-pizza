@@ -144,7 +144,7 @@ export const PartnershipContactForm = () => {
 
         <div className="flex flex-col gap-1">
           <label htmlFor="city" className="font-esamanru text-sm text-black desktop:text-lg">
-            Kota
+            Kota <span className="text-rose-500">*</span>
           </label>
           <select
             id="city"
@@ -167,7 +167,7 @@ export const PartnershipContactForm = () => {
             htmlFor="businessType"
             className="font-esamanru text-sm text-black desktop:text-lg"
           >
-            Tipe Bisnis
+            Tipe Bisnis <span className="text-rose-500">*</span>
           </label>
           <select
             id="businessType"
@@ -187,7 +187,7 @@ export const PartnershipContactForm = () => {
 
         <div className="flex flex-col gap-1">
           <label htmlFor="capital" className="font-esamanru text-sm text-black desktop:text-lg">
-            Ketersediaan Modal
+            Ketersediaan Modal <span className="text-rose-500">*</span>
           </label>
           <select
             id="capital"
@@ -207,7 +207,7 @@ export const PartnershipContactForm = () => {
 
         <div className="flex flex-col gap-1">
           <label htmlFor="startDate" className="font-esamanru text-sm text-black desktop:text-lg">
-            Tanggal Mulai
+            Tanggal Mulai <span className="text-rose-500">*</span>
           </label>
           <select
             id="startDate"
