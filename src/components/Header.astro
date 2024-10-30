@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import eatPizzaLogo from "@/assets/images/eatpizza-logo.png";
-import menuToggle from "@/assets/images/menu-toggle.png";
 
 const styles = {
   navLinks: "font-esamanru font-semibold text-dark hover:text-third duration-200",
@@ -19,19 +18,12 @@ const navLinks = [
 ];
 ---
 
-<header class="px-4 py-2 fixed w-full bg-main z-50 tablet:p-5 laptop:px-8">
+<header class="px-6 py-4 fixed w-full bg-main z-50 tablet:p-5 laptop:px-8">
   <nav class="flex justify-between items-center">
     <!-- Logo -->
     <a href="/" class="flex items-center">
-      <Image src={eatPizzaLogo} alt="Logo" class="h-8 mr-2 laptop:h-12 w-fit" />
+      <Image src={eatPizzaLogo} alt="Logo" class="h-9 mr-2 laptop:h-12 w-fit" />
     </a>
-
-    <!-- Hamburger icon for mobile view -->
-    <!-- <div class="tablet:hidden">
-      <button id="menu-toggle" class="duration-300 ease-in-out">
-        <Image src={menuToggle} alt="menu" class="w-12" />
-      </button>
-    </div> -->
 
     <div class="menu-toggle relative flex items-center h-[30px] w-[30px] laptop:hidden">
       <button id="menu-toggle" class="absolute flex flex-col items-end gap-2">

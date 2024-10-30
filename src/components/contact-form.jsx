@@ -58,14 +58,14 @@ export const ContactForm = () => {
   }
 
   return (
-    <div className="relative z-10 flex flex-col justify-center gap-6 rounded-lg bg-white p-5 tablet:p-10 laptop:gap-10 laptop:rounded-none laptop:rounded-bl-lg laptop:rounded-tl-lg desktop:p-24">
+    <div className="relative w-full z-10 flex flex-col justify-center gap-6 rounded-lg bg-white p-5 tablet:p-10 laptop:gap-10 laptop:rounded-none laptop:rounded-bl-lg laptop:rounded-tl-lg desktop:p-24">
       <div className="flex flex-col gap-2 laptop:gap-5">
         <h2 className="font-esamanru text-xl font-semibold text-black desktop:text-5xl desktop:leading-tight">
-          Tertarik jadi bagian dari keluarga besar Eat Pizza Indonesia?
+          Hubungi Kami!
         </h2>
-        <p className="font-esamanru text-sm font-medium text-black desktop:text-3xl">
+        {/* <p className="font-esamanru text-sm font-medium text-black desktop:text-3xl">
           Isi form di bawah ini untuk mulai perjalanan seru bareng kami!
-        </p>
+        </p> */}
       </div>
 
       <form onSubmit={handleSubmit} autoComplete="off" className="flex w-full flex-col gap-2">
@@ -115,7 +115,6 @@ export const ContactForm = () => {
               id="phoneNumber"
               name="phone number"
               type="text"
-              placeholder="+62"
               value={formData["phone number"]}
               onChange={handleChange}
               className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
@@ -164,7 +163,6 @@ export const ContactForm = () => {
           <textarea
             id="comment"
             name="comment"
-            placeholder="Komentar disini..."
             value={formData.comment}
             onChange={handleChange}
             className="h-32 w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
