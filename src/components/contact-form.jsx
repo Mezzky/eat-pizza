@@ -136,7 +136,7 @@ export const ContactForm = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-1">
+        {/* <div className="flex flex-col gap-1">
           <label htmlFor="city" className="font-esamanru text-sm text-black desktop:text-lg">
             Kota
           </label>
@@ -154,7 +154,7 @@ export const ContactForm = () => {
               </option>
             ))}
           </select>
-        </div>
+        </div> */}
 
         <div className="flex flex-col gap-1">
           <label htmlFor="comment" className="font-esamanru text-sm text-black desktop:text-lg">
