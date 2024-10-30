@@ -5,7 +5,7 @@ import contactShape from "@/assets/images/contact-shape.svg";
 
 import FlyoutBox from "@/components/flyout-box.astro";
 import Layout from "../layout/MainLayout.astro";
-const title = "Contact Page";
+const title = "Contact";
 const metaDesc =
   "Ada pertanyaan atau ingin bekerja sama dengan kami? Hubungi kami sekarang! Tim kami siap membantu Anda.";
 ---
@@ -29,7 +29,7 @@ const metaDesc =
     >
       Contact Us
     </h1>
-    <div class="contact-box grid laptop:grid-cols-custom-70-30 self-center z-10">
+    <div class="contact-box w-full grid laptop:grid-cols-custom-70-30 self-center z-10">
       <ContactForm client:idle />
       <div
         class="bg-contact bg-no-repeat bg-cover bg-center laptop:rounded-tr-lg laptop:rounded-br-lg"

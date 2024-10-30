@@ -121,7 +121,6 @@ export const PartnershipContactForm = () => {
               id="phoneNumber"
               name="phone number"
               type="text"
-              placeholder="+62"
               value={formData["phone number"]}
               onChange={handleChange}
               className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
@@ -154,7 +153,7 @@ export const PartnershipContactForm = () => {
             onChange={handleChange}
             className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
           >
-            <option value="">Pilih kota Anda</option>
+            <option value=""></option>
             {CITIES.map((city) => (
               <option key={city} value={city}>
                 {city}
@@ -177,7 +176,7 @@ export const PartnershipContactForm = () => {
             onChange={handleChange}
             className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
           >
-            <option value="">Pilih tipe bisnis Anda</option>
+            <option value=""></option>
             {BUSINESS_TYPES.map((business) => (
               <option key={business} value={business}>
                 {business}
@@ -197,7 +196,7 @@ export const PartnershipContactForm = () => {
             onChange={handleChange}
             className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
           >
-            <option value="">Pilih ketersediaan modal Anda</option>
+            <option value=""></option>
             {CAPITALS.map((cap) => (
               <option key={cap} value={cap}>
                 {cap}
@@ -217,7 +216,7 @@ export const PartnershipContactForm = () => {
             onChange={handleChange}
             className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
           >
-            <option value="">Pilih tanggal mulai Anda</option>
+            <option value=""></option>
             {START_DATES.map((date) => (
               <option key={date} value={date}>
                 {date}
@@ -233,7 +232,6 @@ export const PartnershipContactForm = () => {
           <textarea
             id="comment"
             name="comment"
-            placeholder="Komentar disini..."
             value={formData.comment}
             onChange={handleChange}
             className="h-32 w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
