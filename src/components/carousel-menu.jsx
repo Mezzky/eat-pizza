@@ -11,7 +11,7 @@ import { MENU_PIZZA } from "@/constants";
 export function CarouselMenu() {
   return (
     <Carousel
-      className="w-[80%] tablet:w-full"
+      className="w-[80%] tablet:w-[90%] tablet:p-6"
       opts={{
         align: "start",
         loop: true,
@@ -20,7 +20,7 @@ export function CarouselMenu() {
       <CarouselContent>
         {MENU_PIZZA.slice(0, 6).map(({ img, name, description }) => (
           <CarouselItem key={name} className="tablet:basis-1/2 laptop:basis-1/3">
-            <Card>
+            <Card className="h-full">
               <CardContent className="flex flex-col items-center justify-center space-y-4 p-6 text-center">
                 <img src={img.src} alt={name} className="w-[225px]" />
                 <div className="space-y-2">

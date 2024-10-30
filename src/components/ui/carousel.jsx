@@ -154,7 +154,7 @@ const CarouselPrevious = React.forwardRef(
         variant={variant}
         size={size}
         className={cn(
-          "absolute font-bold h-8 w-8 tablet:h-10 tablet:w-10 rounded-full border-transparent bg-third text-white text-3xl",
+          "group absolute h-8 w-8 rounded-full border-transparent bg-third tablet:h-14 tablet:w-14",
           orientation === "horizontal"
             ? "-left-12 top-1/2 -translate-y-1/2"
             : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -164,7 +164,7 @@ const CarouselPrevious = React.forwardRef(
         onClick={scrollPrev}
         {...props}
       >
-        <ChevronLeftIcon className="text-xl font-bold" />
+        <ChevronLeftIcon className="!h-8 !w-8 stroke-white stroke-1 group-hover:stroke-third" />
         <span className="sr-only">Previous slide</span>
       </Button>
     );
@@ -182,7 +182,7 @@ const CarouselNext = React.forwardRef(
         variant={variant}
         size={size}
         className={cn(
-          "absolute font-bold h-8 w-8 tablet:h-10 tablet:w-10 rounded-full border-transparent bg-third text-white text-3xl",
+          "group absolute h-8 w-8 rounded-full border-transparent bg-third tablet:h-14 tablet:w-14",
           orientation === "horizontal"
             ? "-right-12 top-1/2 -translate-y-1/2"
             : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -192,7 +192,7 @@ const CarouselNext = React.forwardRef(
         onClick={scrollNext}
         {...props}
       >
-        <ChevronRightIcon className="text-xl font-bold" />
+        <ChevronRightIcon className="!h-8 !w-8 stroke-white stroke-1 group-hover:stroke-third" />
         <span className="sr-only">Next slide</span>
       </Button>
     );
