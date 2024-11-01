@@ -13,12 +13,12 @@ import hotSpicyChicken from "@/assets/images/menu/hot-spicy-chicken.png";
 export const MENU_PIZZA = [
   {
     img: realCheese,
-    name: "real cheese",
+    name: "100% real cheese",
     description: "Keju Spesial, Saus Pizza",
   },
   {
     img: condensedMilk,
-    name: "condensed milk",
+    name: "the milky way",
     description: "Susu Kental Manis, Keju Spesial, Saus Putih",
   },
   {
@@ -28,22 +28,22 @@ export const MENU_PIZZA = [
   },
   {
     img: sweetPineapple,
-    name: "sweet pineapple",
+    name: "cheesy pineapple",
     description: "Nanas, Ubi Manis, Keju Spesial",
   },
   {
     img: sweetCorn,
-    name: "sweet corn",
+    name: "pop pop corn",
     description: "Jagung, Saus Spesial, Saus Pizza",
   },
   {
     img: pepperoni,
-    name: "pepperoni",
+    name: "beef pepperoni",
     description: "Pepperoni, Keju Spesial, Saus Pizza",
   },
   {
     img: aloha,
-    name: "aloha",
+    name: "aloha hawaiian",
     description: "Ayam, Nanas, Saus Putih",
   },
   {
@@ -53,12 +53,12 @@ export const MENU_PIZZA = [
   },
   {
     img: sweetBulgogi,
-    name: "sweet bulgogi",
+    name: "k bulgogi chicken",
     description: "Ayam Bulgogi, Ayam Cincang, Saus Pizza",
   },
   {
     img: chickenLongSausage,
-    name: "chicken long sausage",
+    name: "korean sausage",
     description: "Sosis Ayam, Ayam Cincang, Saus Honey Mustard",
   },
   {
