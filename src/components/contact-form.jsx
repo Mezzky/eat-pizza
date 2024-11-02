@@ -1,4 +1,3 @@
-import { CITIES, BUSINESS_TYPES, CAPITALS, START_DATES } from "@/constants";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
@@ -8,7 +7,6 @@ export const ContactForm = () => {
     "last name": "",
     "phone number": "",
     email: "",
-    city: "",
     comment: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -27,7 +25,7 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(import.meta.env.PUBLIC_SPREADSHEET_SCRIPT_URL, {
+      const response = await fetch(import.meta.env.PUBLIC_CONTACT_FORM_SPREADSHEET_SCRIPT_URL, {
         method: "POST",
         body: new FormData(e.target),
       });
@@ -41,7 +39,6 @@ export const ContactForm = () => {
           "last name": "",
           "phone number": "",
           email: "",
-          city: "",
           comment: "",
         });
       } else {
@@ -58,7 +55,7 @@ export const ContactForm = () => {
   }
 
   return (
-    <div className="relative w-full z-10 flex flex-col justify-center gap-6 rounded-lg bg-white p-5 tablet:p-10 laptop:gap-10 laptop:rounded-none laptop:rounded-bl-lg laptop:rounded-tl-lg desktop:p-24">
+    <div className="relative z-10 flex w-full flex-col justify-center gap-6 rounded-lg bg-white p-5 tablet:p-10 laptop:gap-10 laptop:rounded-none laptop:rounded-bl-lg laptop:rounded-tl-lg desktop:p-24">
       <div className="flex flex-col gap-2 laptop:gap-5">
         <h2 className="font-esamanru text-xl font-semibold text-black desktop:text-5xl desktop:leading-tight">
           Hubungi Kami!
@@ -69,8 +66,6 @@ export const ContactForm = () => {
       </div>
 
       <form onSubmit={handleSubmit} autoComplete="off" className="flex w-full flex-col gap-2">
-        <input type="hidden" name="formType" value="landing" />
-
         <div className="grid grid-cols-2 gap-2">
           <div className="flex flex-col gap-1">
             <label htmlFor="firstName" className="font-esamanru text-sm text-black desktop:text-lg">
@@ -135,26 +130,6 @@ export const ContactForm = () => {
             />
           </div>
         </div>
-
-        {/* <div className="flex flex-col gap-1">
-          <label htmlFor="city" className="font-esamanru text-sm text-black desktop:text-lg">
-            Kota
-          </label>
-          <select
-            id="city"
-            name="city"
-            value={formData.city}
-            onChange={handleChange}
-            className="w-full rounded-sm border border-slate-500 p-2 text-sm text-slate-500 focus:ring-slate-900 desktop:text-lg"
-          >
-            <option value="">Pilih kota Anda</option>
-            {CITIES.map((city) => (
-              <option key={city} value={city}>
-                {city}
-              </option>
-            ))}
-          </select>
-        </div> */}
 
         <div className="flex flex-col gap-1">
           <label htmlFor="comment" className="font-esamanru text-sm text-black desktop:text-lg">

@@ -2,7 +2,7 @@ import { CITIES, BUSINESS_TYPES, CAPITALS, START_DATES } from "@/constants";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
-export const PartnershipContactForm = () => {
+export const PartnershipForm = () => {
   const [formData, setFormData] = useState({
     "first name": "",
     "last name": "",
@@ -30,7 +30,7 @@ export const PartnershipContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(import.meta.env.PUBLIC_SPREADSHEET_SCRIPT_URL, {
+      const response = await fetch(import.meta.env.PUBLIC_PARTNERSHIP_FORM_SPREADSHEET_SCRIPT_URL, {
         method: "POST",
         body: new FormData(e.target),
       });
@@ -75,8 +75,6 @@ export const PartnershipContactForm = () => {
       </div>
 
       <form onSubmit={handleSubmit} autoComplete="off" className="flex w-full flex-col gap-2">
-        <input type="hidden" name="formType" value="partnership" />
-
         <div className="grid grid-cols-2 gap-2">
           <div className="flex flex-col gap-1">
             <label htmlFor="firstName" className="font-esamanru text-sm text-black desktop:text-lg">
