@@ -59,7 +59,7 @@ export const MENU_PIZZA = [
   {
     img: chickenLongSausage,
     name: "korean sausage",
-    description: "Sosis Ayam, Ayam Cincang, Saus Honey Mustard",
+    description: "K-Sosis, Ayam Cincang, Saus Honey Mustard",
   },
   {
     img: hotSpicyChicken,
