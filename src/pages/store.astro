@@ -11,9 +11,9 @@ const metaDesc =
 const addressStore = [
   {
     title: "Summarecon Jakarta",
-    address: "Summarecon Mall Kelapa Gading 3 (Segera)",
-    openingHour: "Jam Operasional: 11.00 - 22.00 (atau Sampai Habis)",
-    linkBtn: "#",
+    address: "Summarecon Mall Kelapa Gading 3 Lt 3. #TW-01 Theater Link. Jl. Boulevard Raya, Kelapa Gading Timur, Kecamatan Kelapa Gading. Jakarta Utara 14240",
+    openingHour: "Jam Operasional: 10.00 - 22.00 (atau Sampai Habis)",
+    linkBtn: "https://maps.app.goo.gl/sKD2AzDyQDrBKMQh7",
   },
 ];
 ---
@@ -42,7 +42,7 @@ const addressStore = [
     <div class="relative w-full pb-[100%] laptop:pb-[56.25%] desktop:pb-[40%]">
       <iframe
         class="absolute top-0 left-0 w-full h-full rounded-xl"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.802046174725!2d106.90355538496574!3d-6.157261244423001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f54bbca6c649%3A0x1c1a278e20ff1c47!2sSummarecon%20Mall%20Kelapa%20Gading!5e0!3m2!1sid!2sid!4v1729662408655!5m2!1sid!2sid"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d416.958352707046!2d106.90833560157107!3d-6.157706884731676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f53db4a0dc67%3A0xba4a89f7391d275f!2sEat%20Pizza!5e0!3m2!1sid!2sid!4v1731726384873!5m2!1sid!2sid"
         style="border:0;"
         allowfullscreen=""
         loading="lazy"
@@ -50,7 +50,7 @@ const addressStore = [
     </div>
     <div class="box-card z-10 grid grid-cols-1 gap-4 laptop:grid-cols-2 w-full">
       {addressStore.map(({ title, address, openingHour, linkBtn }) => (
-        <div data-aos="zoom-in" class="card flex flex-col gap-2 items-center bg-third py-10 px-5 rounded-lg text-white laptop:p-10">
+        <div data-aos="zoom-in" class="card flex flex-col gap-2 items-center bg-third py-10 px-6 rounded-lg text-white laptop:p-10">
           <h4 class="text-center font-esamanru text-xl font-semibold">{title}</h4>
           <p class="text-center font-esamanru font-light text-sm">{address}</p>
           <p class="text-center font-esamanru font-light text-sm">{openingHour}</p>
