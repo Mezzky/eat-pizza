@@ -34,7 +34,7 @@ export const MENU_PIZZA = [
   {
     img: sweetCorn,
     name: "pop pop corn",
-    description: "Jagung, Saus Spesial, Saus Pizza",
+    description: "Jagung, Keju Spesial, Saus Pizza",
   },
   {
     img: pepperoni,
