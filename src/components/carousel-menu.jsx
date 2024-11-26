@@ -17,8 +17,9 @@ export function CarouselMenu() {
         loop: true,
       }}
     >
+      {/* Put This code after MENU_PIZZA if you want show some pizza not all [.slice(0, 6)] */}
       <CarouselContent>
-        {MENU_PIZZA.slice(0, 6).map(({ img, name, description }) => (
+        {MENU_PIZZA.map(({ img, name, description }) => (
           <CarouselItem key={name} className="tablet:basis-1/2 laptop:basis-1/3">
             <Card className="h-full">
               <CardContent className="flex flex-col items-center justify-center space-y-4 p-6 text-center">
