@@ -39,6 +39,12 @@ export const PartnershipForm = () => {
         toast({
           title: "Terima kasih! Form telah berhasil dikirim.",
         });
+
+        // ✅ Call global triggerConversion function
+        if (typeof window !== "undefined" && typeof window.triggerConversion === "function") {
+          window.triggerConversion();
+        }   
+
         setFormData({
           "first name": "",
           "last name": "",

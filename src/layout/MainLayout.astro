@@ -14,6 +14,14 @@ import { Toaster } from "@/components/ui/toaster";
     <title>Eat Pizza Indonesia | {title}</title>
     <meta name="description" content={metaDesc} />
     <link rel="icon" href="/eatpizza-favicon.png" type="image/x-icon" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16998534830"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16998534830');
+    </script> 
   </head>
   <body class="bg-main scroll-smooth overflow-x-hidden">
     <Header />
