@@ -15,6 +15,12 @@ const addressStore = [
     openingHour: "Jam Operasional: 10.00 - 22.00 (atau Sampai Habis)",
     linkBtn: "https://maps.app.goo.gl/sKD2AzDyQDrBKMQh7",
   },
+  {
+    title: "Lippo Mall Puri",
+    address: "Lippo Mall Puri, Jl. Puri Indah Raya Blok U1 RT03/02 Kembangan Selatan, Kec. Kembangan, Kota Jakarta Barat, DKI Jakarta 11610 (Unit L2-82A)",
+    openingHour: "Jam Operasional: 10.00 - 22.00 (atau Sampai Habis)",
+    linkBtn: "https://maps.app.goo.gl/EnL93LbGFSZ77K6P6",
+  },
 ];
 ---
 
@@ -39,14 +45,25 @@ const addressStore = [
         Berikut adalah berbagai lokasi dari toko kami yang sudah beroprasi
       </p>
     </div>
-    <div class="relative w-full pb-[100%] laptop:pb-[56.25%] desktop:pb-[40%]">
-      <iframe
-        class="absolute top-0 left-0 w-full h-full rounded-xl"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d416.958352707046!2d106.90833560157107!3d-6.157706884731676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f53db4a0dc67%3A0xba4a89f7391d275f!2sEat%20Pizza!5e0!3m2!1sid!2sid!4v1731726384873!5m2!1sid!2sid"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map-section flex flex-col gap-4 relative w-full z-10 tablet:flex-row">
+      <div class="relative w-full pb-[100%] laptop:pb-[56.25%] desktop:pb-[40%]">
+        <iframe
+          class="absolute top-0 left-0 w-full h-full rounded-xl"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d416.958352707046!2d106.90833560157107!3d-6.157706884731676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f53db4a0dc67%3A0xba4a89f7391d275f!2sEat%20Pizza!5e0!3m2!1sid!2sid!4v1731726384873!5m2!1sid!2sid"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="relative w-full pb-[100%] laptop:pb-[56.25%] desktop:pb-[40%]">
+        <iframe
+          class="absolute top-0 left-0 w-full h-full rounded-xl"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5744540331934!2d106.73895499999999!3d-6.1876583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7c8ab20c063%3A0x961db982bf185c9b!2sEat%20Pizza%20-%20Lippo%20Mall%20Puri!5e0!3m2!1sid!2sid!4v1754529437657!5m2!1sid!2sid"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
     <div class="box-card z-10 grid grid-cols-1 gap-4 laptop:grid-cols-2 w-full">
       {addressStore.map(({ title, address, openingHour, linkBtn }) => (
